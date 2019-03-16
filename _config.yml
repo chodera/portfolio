@@ -1,0 +1,49 @@
+# Site
+name: "David Witkowski"
+title: "Portfolio"
+description: "Portfolio of data-related projects"
+meta_description: "Portfolio of data-related projects by David Witkowski."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+#baseurl: /mediumish-theme-jekyl
+disqus: 'demowebsite'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  david:
+    name: David
+    display_name: David
+    email: david.witkowski@posteo.net
+    description: "Quantitative social scientist. Working with data."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
