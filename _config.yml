@@ -5,8 +5,6 @@ description: "Portfolio of data-related projects"
 meta_description: "Portfolio of data-related projects by David Witkowski."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
-#baseurl: /mediumish-theme-jekyl
-disqus: 'demowebsite'
 include: ["_pages"]
 permalink: /:title/
 
