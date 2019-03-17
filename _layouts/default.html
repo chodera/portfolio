@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.ico?v=2">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -26,17 +26,7 @@
 
 </head>
 
-{% if jekyll.environment == 'production' %}
-<!-- change your GA id in _config.yml -->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', '{{site.google_analytics}}', 'auto');
-ga('send', 'pageview');
-</script>
-{% endif %}
+
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
@@ -47,13 +37,13 @@ ga('send', 'pageview');
 
   <!-- Begin Menu Navigation
   ================================================== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+  <nav class="navbar navbar-expand navbar-light bg-white fixed-top mediumnavigation nav-down">
 
       <div class="container pr-0">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
 
       <div class="collapse navbar-collapse" id="navbarMediumish">
@@ -64,7 +54,7 @@ ga('send', 'pageview');
 
 
                 <li class="nav-item active">
-                <a class="nav-link" target="_blank" href="https://plus.google.com/share?url={{ page.url | absolute_url }}" >
+                <a class="nav-link" href="mailto:david.witkowski@posteo.net">
                 <i class="fas fa-envelope" ></i>
                 </a>
                 </li>
@@ -130,15 +120,14 @@ ga('send', 'pageview');
 
 <footer class="footer">
 
-
 <div class="content">
 
-            <div class="inner">
+<!--            <div class="inner">
               <a class="link-ft" target="_blank" href="https://jekyllrb.com/">Jekyll</a>
               <aclass="link-ft">·</a>
                 <a class="link-ft" target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish</a>
             </div>
-
+-->
     </div>
 </footer>
 <!-- End Footer
@@ -148,15 +137,7 @@ ga('send', 'pageview');
 <!-- Scripts
 ================================================== -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
 <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
-
-<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
-
-<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 
 </body>
 </html>
