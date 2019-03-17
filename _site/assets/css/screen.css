@@ -732,6 +732,11 @@ License: https://www.wowthemes.net/freebies-license/
     text-decoration:none;
 }
 
+
+a.black {
+    color: black;
+}
+
 .content
 {
  text-align: center;
