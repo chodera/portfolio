@@ -7,7 +7,7 @@ permalink: /about
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">    
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>I am a quantitative social scientist who works with data. This website serves as a portfolio of personal data-related projects. </p>
 
 </div>
 
@@ -19,15 +19,15 @@ permalink: /about
 <ul class="navbar-nav ml-auto">
 
     <li>
-    <a class="ab-contact" target="_blank" href="mailto:david.witkowski@posteo.net"><i class="fas fa-envelope"></i> Email</a>
+    <a class="about-link" target="_blank" href="mailto:david.witkowski@posteo.net"><i class="fas fa-envelope"></i> Email</a>
     </li>
 
     <li>
-    <a target="_blank" href="https://github.com/chodera"><i class="fab fa-github"></i> GitHub</a>
+    <a class="about-link" target="_blank" href="https://github.com/chodera"><i class="fab fa-github"></i> GitHub</a>
     </li>
 
     <li>
-    <p><a target="_blank" href="https://www.linkedin.com/in/david-witkowski-2bb3a4157/"><i class="fab fa-linkedin"></i> Linkedin</a></p>
+    <a class="about-link" target="_blank" href="https://www.linkedin.com/in/david-witkowski-2bb3a4157/"><i class="fab fa-linkedin"></i> LinkedIn</a>
     </li>
 
 </ul>

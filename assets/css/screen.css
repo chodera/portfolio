@@ -713,8 +713,23 @@ License: https://www.wowthemes.net/freebies-license/
 }
 
 .link-ft {
-  color: LightGray;
+  color:rgba(0,0,0,.44);
   text-align: center;
+}
+
+.link-ft:hover {
+  color:rgba(0,0,0,.8);
+  text-align: center;
+}
+
+
+.about-link {
+    color:rgba(0,0,0,.44);
+    transition:all 0.2s;
+}
+.about-link:hover {
+    color: rgba(0,0,0,.8);
+    text-decoration:none;
 }
 
 .content
