@@ -5,6 +5,8 @@ archive: false
 post_class: post-template
 ---
 
+
+{% if page.normal %}
 <!-- Begin Article
 ================================================== -->
 <div class="container">
@@ -46,3 +48,34 @@ post_class: post-template
 </div>
 <!-- End Article
 ================================================== -->
+{% else %}
+<div class="container">
+
+
+		<!-- Post -->
+        {% assign author = site.authors[page.author] %}
+
+			<div class="mainheading">
+
+      <!-- Post Title -->
+				<h1 class="posttitle">{{ page.title }}</h1>
+
+			</div>
+
+			<!-- Post Featured Image -->
+			{% if page.show %}
+				{% if page.image %}<img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ page.image | absolute_url }}{% endif %}" alt="{{ page.title }}">
+				{% endif %}
+			{% endif %}
+			<!-- End Featured Image -->
+
+			<!-- Post Content -->
+			<div class="article-post">
+				{{content}}
+			</div>
+
+			<!-- End Post -->
+
+
+</div>
+{% endif %}
