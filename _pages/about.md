@@ -23,12 +23,14 @@ permalink: /about
     </li>
 
     <li>
+    <a class="about-link" target="_blank" href="https://www.linkedin.com/in/david-witkowski-2bb3a4157/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </li>
+
+
+    <li>
     <a class="about-link" target="_blank" href="https://github.com/chodera"><i class="fab fa-github"></i> GitHub</a>
     </li>
 
-    <li>
-    <a class="about-link" target="_blank" href="https://www.linkedin.com/in/david-witkowski-2bb3a4157/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </li>
 
 </ul>
 
