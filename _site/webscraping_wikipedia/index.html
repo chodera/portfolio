@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" href="/assets/images/favicon.ico?v=2">
+
+<title>Scraping a Wikipedia Table | David Witkowski</title>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Scraping a Wikipedia Table | Portfolio</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Scraping a Wikipedia Table" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I tried the rvest package by scraping a Wikipedia table about communities in the Département “Bas-Rhin” in the region of Alsace in France. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data." />
+<meta property="og:description" content="I tried the rvest package by scraping a Wikipedia table about communities in the Département “Bas-Rhin” in the region of Alsace in France. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data." />
+<link rel="canonical" href="http://localhost:4000/webscraping_wikipedia/" />
+<meta property="og:url" content="http://localhost:4000/webscraping_wikipedia/" />
+<meta property="og:site_name" content="Portfolio" />
+<meta property="og:image" content="http://localhost:4000/assets/images/wiki.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-21T00:00:00+01:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","image":"http://localhost:4000/assets/images/wiki.png","url":"http://localhost:4000/webscraping_wikipedia/","headline":"Scraping a Wikipedia Table","dateModified":"2019-03-21T00:00:00+01:00","datePublished":"2019-03-21T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/webscraping_wikipedia/"},"description":"I tried the rvest package by scraping a Wikipedia table about communities in the Département “Bas-Rhin” in the region of Alsace in France. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="/assets/css/screen.css" rel="stylesheet">
+
+<link href="/assets/css/main.css" rel="stylesheet">
+
+<script src="/assets/js/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body class="layout-post">
+
+<div class="site-content">
+
+<div class="container">
+
+  <!-- Begin Menu Navigation
+  ================================================== -->
+  <nav class="navbar navbar-expand navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+      <div class="container pr-0">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarMediumish">
+
+          <!-- Begin Menu -->
+
+              <ul class="navbar-nav ml-auto">
+
+                  
+                  <li class="nav-item">
+                  
+                  <a class="nav-link" href="/about">About</a>
+                  </li>
+
+              </ul>
+
+          <!-- End Menu -->
+
+      </div>
+
+      </div>
+  </nav>
+  <!-- End Navigation
+  ================================================== -->
+
+
+
+<!-- Site Title
+================================================== -->
+<div class="mainheading">
+<a class="mainheading" href="/">
+    <h1 class="sitetitle"><a class="black" href="/">David Witkowski</h1>
+</a>
+    <p class="lead">
+         Portfolio of data-related projects
+    </p>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    
+<!-- Begin Article
+================================================== -->
+<div class="container">
+	<div class="row">
+
+		<!-- Post Share -->
+		<div class="col-md-2 pl-0">
+           <div class="share">
+    <p>
+        Contact
+    </p>
+    <ul>
+      <li class="ml-1 mr-1">
+      <a class="link-ft" href="mailto:david.witkowski@posteo.net">
+      <i class="fas fa-envelope" ></i>
+      </a>
+      </li>
+
+      <li class="ml-1 mr-1">
+      <a class="link-ft" target="_blank" href="https://www.linkedin.com/in/david-witkowski-2bb3a4157/">
+      <i class="fab fa-linkedin"></i>
+      </a>
+      </li>
+
+        <li class="ml-1 mr-1">
+        <a class="link-ft" target="_blank" href="https://github.com/chodera">
+        <i class="fab fa-github"></i>
+        </a>
+        </li>
+
+    </ul>
+
+</div>
+
+		</div>
+
+
+		<!-- Post -->
+        
+
+		<div class="col-md-9 flex-first flex-md-unordered">
+			<div class="mainheading">
+
+      <!-- Post Title -->
+				<h1 class="posttitle">Scraping a Wikipedia Table</h1>
+
+			</div>
+
+			<!-- Post Featured Image -->
+			
+			<!-- End Featured Image -->
+
+			<!-- Post Content -->
+			<div class="article-post">
+				<p>I tried the rvest package by scraping a Wikipedia table about <a href="https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin">communities in the Département “Bas-Rhin” in the region of Alsace in France</a>. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">rvest</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span></code></pre></figure>
+
+<p>Scraping a webpage is surprisingly easy with the convenient rvest package. You only need little knowledge about CSS selectors to access the information you are interested in, in this case the whole table which is converted into a data frame.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">url</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s1">'https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin'</span><span class="w">
+</span><span class="n">webpage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_html</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w">
+</span><span class="n">table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">html_nodes</span><span class="p">(</span><span class="n">webpage</span><span class="p">,</span><span class="s1">'table.wikitable'</span><span class="p">)</span><span class="w">
+</span><span class="n">table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">html_table</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">bind_rows</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">as_tibble</span><span class="p">()</span></code></pre></figure>
+
+<p>The resulting data frame consists of 514 observations and 10 variables.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">## # A tibble: 514 x 10
+##    Nom   CodeInsee `Code postal` Arrondissement Canton Intercommunalité
+##    &lt;chr&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;           
+##  1 Stra… 67482           6.70e14 Strasbourg     Stras… Eurométropole d…
+##  2 Ache… 67001           6.72e 4 Strasbourg     Lingo… Eurométropole d…
+##  3 Adam… 67002           6.73e 4 Saverne        Ingwi… CC de l'Alsace …
+##  4 Albé  67003           6.72e 4 Sélestat-Erst… Mutzig CC de la Vallée…
+##  5 Alte… 67005           6.73e 4 Saverne        Bouxw… CC du Pays de l…
+##  6 Alte… 67006           6.75e 4 Saverne        Saver… CC du Pays de S…
+##  7 Alto… 67008           6.71e 4 Molsheim       Molsh… CC de la région…
+##  8 Altw… 67009           6.73e 4 Saverne        Ingwi… CC de l'Alsace …
+##  9 Andl… 67010           6.71e 4 Sélestat-Erst… Obern… CC du Pays de B…
+## 10 Arto… 67011           6.74e 4 Sélestat-Erst… Séles… CC de Marckolsh…
+## # … with 504 more rows, and 4 more variables: `Superficie(km2)` &lt;chr&gt;,
+## #   `Population(dernière pop. légale)` &lt;chr&gt;, `Densité(hab./km2)` &lt;chr&gt;,
+## #   Modifier &lt;lgl&gt;</code></pre></figure>
+
+<p>A first glance reveals that there are some problems with the data, which is typical for freshly scraped data. The following section deals with all the data preprocessing, for each variable one by one.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Nom</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">Nom</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-Preprocessing: remove additional information</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">filter</span><span class="p">(</span><span class="n">str_detect</span><span class="p">(</span><span class="n">Nom</span><span class="p">,</span><span class="w"> </span><span class="s2">"\\("</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">Nom</span><span class="p">)</span><span class="w">
+
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">Nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">Nom</span><span class="p">,</span><span class="w"> </span><span class="s2">"\\(préfecture\\)"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Nom</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># CodeInsee</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">CodeInsee</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-Preprocessing: converting to numerical</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">CodeInsee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">CodeInsee</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">code_insee</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CodeInsee</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Code postal</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">`Code postal`</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-preprocessing: split data</span><span class="w">
+</span><span class="c1"># Problem: some have more than one value and got concatenated, Strasbourg even has three</span><span class="w">
+</span><span class="c1"># Strategy: split into several variables</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">code_postal_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_sub</span><span class="p">(</span><span class="n">`Code postal`</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">code_postal_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_sub</span><span class="p">(</span><span class="n">`Code postal`</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">code_postal_3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_sub</span><span class="p">(</span><span class="n">`Code postal`</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">code_postal_1</span><span class="p">,</span><span class="w"> </span><span class="n">code_postal_2</span><span class="p">,</span><span class="w"> </span><span class="n">code_postal_3</span><span class="p">,</span><span class="w"> </span><span class="n">everything</span><span class="p">(),</span><span class="w"> </span><span class="o">-</span><span class="n">`Code postal`</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Arrondissement</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">Arrondissement</span><span class="p">)</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">arrondissement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrondissement</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Canton</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">Canton</span><span class="p">)</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">canton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Canton</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Intercommunalité</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">Intercommunalit</span><span class="err">é</span><span class="p">)</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">intercommunalit</span><span class="err">é</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Intercommunalit</span><span class="err">é</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Superficie</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">`Superficie(km2)`</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-Preprocessing: converting to numerical</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Superficie(km2)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">`Superficie(km2)`</span><span class="p">,</span><span class="w"> </span><span class="s2">","</span><span class="p">,</span><span class="w"> </span><span class="s2">"."</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Superficie(km2)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">`Superficie(km2)`</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">superficie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`Superficie(km2)`</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Population</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">`Population(dernière pop. légale)`</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-Preprocessing: removing (2016) and (2015)</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="p">,</span><span class="w"> </span><span class="s2">" \\(2016\\)|\\(2015\\)"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="p">,</span><span class="w"> </span><span class="s2">"\\p{WHITE_SPACE}"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">`Population(dernière pop. légale)`</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">population</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`Population(dernière pop. légale)`</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Densité</span><span class="w">
+</span><span class="n">head</span><span class="p">(</span><span class="n">bas_rhin</span><span class="o">$</span><span class="n">`Densité(hab./km2)`</span><span class="p">)</span><span class="w">
+</span><span class="c1"># Data-Preprocessing: removing white space and converting to numeric</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">   
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Densité(hab./km2)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">`Densité(hab./km2)`</span><span class="p">,</span><span class="w"> </span><span class="s2">"\\p{WHITE_SPACE}"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">mutate</span><span class="p">(</span><span class="n">`Densité(hab./km2)`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">`Densité(hab./km2)`</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">rename</span><span class="p">(</span><span class="n">densite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">`Densité(hab./km2)`</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Delete last column "Modifier"</span><span class="w">
+</span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">Modifier</span><span class="p">)</span></code></pre></figure>
+
+<p>Let’s take another look at the cleaned data set.</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">## # A tibble: 514 x 11
+##    nom   code_postal_1 code_postal_2 code_postal_3 code_insee
+##    &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;         &lt;chr&gt;              &lt;dbl&gt;
+##  1 Stra… 67000         67100         67200              67482
+##  2 Ache… 67204         ""            ""                 67001
+##  3 Adam… 67320         ""            ""                 67002
+##  4 Albé  67220         ""            ""                 67003
+##  5 Alte… 67270         ""            ""                 67005
+##  6 Alte… 67490         ""            ""                 67006
+##  7 Alto… 67120         ""            ""                 67008
+##  8 Altw… 67260         ""            ""                 67009
+##  9 Andl… 67140         ""            ""                 67010
+## 10 Arto… 67390         ""            ""                 67011
+## # … with 504 more rows, and 6 more variables: arrondissement &lt;chr&gt;,
+## #   canton &lt;chr&gt;, intercommunalité &lt;chr&gt;, superficie &lt;dbl&gt;,
+## #   population &lt;dbl&gt;, densite &lt;dbl&gt;</code></pre></figure>
+
+<p>This data could be used to to create a map of the region, colored by population density.</p>
+
+			</div>
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+
+
+</div>
+
+
+
+<!-- Begin Footer
+================================================== -->
+
+<footer class="footer">
+
+<div class="content">
+
+            <div class="inner">
+              <a class="link-ft" target="_blank" href="https://jekyllrb.com/">Jekyll</a>
+              <aclass="link-ft">·</a>
+                <a class="link-ft" target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish</a>
+            </div>
+
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+
+<!-- Scripts
+================================================== -->
+
+<script src="/assets/js/scrolldown.js"></script>
+
+</body>
+</html>
