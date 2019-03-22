@@ -110,8 +110,10 @@ bas_rhin <- bas_rhin %>%
 head(bas_rhin$`Population(dernière pop. légale)`)
 # Data-Preprocessing: removing (2016) and (2015)
 bas_rhin <- bas_rhin %>%
-  mutate(`Population(dernière pop. légale)` = str_replace_all(`Population(dernière pop. légale)`, " \\(2016\\)|\\(2015\\)", "")) %>%
-  mutate(`Population(dernière pop. légale)` = str_replace_all(`Population(dernière pop. légale)`, "\\p{WHITE_SPACE}", "")) %>%
+  mutate(`Population(dernière pop. légale)` = str_replace_all(`Population(dernière pop. légale)`,
+   " \\(2016\\)|\\(2015\\)", "")) %>%
+  mutate(`Population(dernière pop. légale)` = str_replace_all(`Population(dernière pop. légale)`,
+   "\\p{WHITE_SPACE}", "")) %>%
   mutate(`Population(dernière pop. légale)` = as.numeric(`Population(dernière pop. légale)`)) %>%
   rename(population = `Population(dernière pop. légale)`)
 
