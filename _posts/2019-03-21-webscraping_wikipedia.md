@@ -8,7 +8,7 @@ image: assets/images/wiki.png
 normal: true
 ---
 
-I tried the rvest package by scraping a Wikipedia table about [communities in the Département "Bas-Rhin" in the region of Alsace in France](https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin). First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.
+I tried the rvest package by scraping a Wikipedia table about [communities in the Département "Bas-Rhin" in the region of Alsace in France](https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin){:target="_blank"}. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.
 
 {% highlight r %}
 library(rvest)
@@ -130,8 +130,7 @@ bas_rhin <- bas_rhin %>%
   select(-Modifier)
 {% endhighlight %}
 
-Let's take another look at the cleaned data set.
-
+The clean data set can be downloaded [here]({{ site.url }}/assets/data/bas_rhin.csv).
 
 {% highlight text %}
 ## # A tibble: 514 x 11
@@ -151,5 +150,3 @@ Let's take another look at the cleaned data set.
 ## #   canton <chr>, intercommunalité <chr>, superficie <dbl>,
 ## #   population <dbl>, densite <dbl>
 {% endhighlight %}
-
-This data could be used to to create a map of the region, colored by population density.

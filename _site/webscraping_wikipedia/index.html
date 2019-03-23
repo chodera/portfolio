@@ -156,7 +156,7 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p>I tried the rvest package by scraping a Wikipedia table about <a href="https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin">communities in the Département “Bas-Rhin” in the region of Alsace in France</a>. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.</p>
+				<p>I tried the rvest package by scraping a Wikipedia table about <a href="https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin" target="_blank">communities in the Département “Bas-Rhin” in the region of Alsace in France</a>. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">rvest</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span></code></pre></figure>
@@ -267,7 +267,7 @@
 </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">bas_rhin</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="n">Modifier</span><span class="p">)</span></code></pre></figure>
 
-<p>Let’s take another look at the cleaned data set.</p>
+<p>The clean data set can be downloaded <a href="http://localhost:4000/assets/data/bas_rhin.csv">here</a>.</p>
 
 <figure class="highlight"><pre><code class="language-text" data-lang="text">## # A tibble: 514 x 11
 ##    nom   code_postal_1 code_postal_2 code_postal_3 code_insee
@@ -286,7 +286,6 @@
 ## #   canton &lt;chr&gt;, intercommunalité &lt;chr&gt;, superficie &lt;dbl&gt;,
 ## #   population &lt;dbl&gt;, densite &lt;dbl&gt;</code></pre></figure>
 
-<p>This data could be used to to create a map of the region, colored by population density.</p>
 
 			</div>
 

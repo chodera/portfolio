@@ -5,13 +5,13 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Mar 2019 21:13:12 +0100</pubDate>
-    <lastBuildDate>Fri, 22 Mar 2019 21:13:12 +0100</lastBuildDate>
+    <pubDate>Sat, 23 Mar 2019 10:18:24 +0100</pubDate>
+    <lastBuildDate>Sat, 23 Mar 2019 10:18:24 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Scraping a Wikipedia Table</title>
-        <description>&lt;p&gt;I tried the rvest package by scraping a Wikipedia table about &lt;a href=&quot;https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin&quot;&gt;communities in the Département “Bas-Rhin” in the region of Alsace in France&lt;/a&gt;. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.&lt;/p&gt;
+        <description>&lt;p&gt;I tried the rvest package by scraping a Wikipedia table about &lt;a href=&quot;https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin&quot; target=&quot;_blank&quot;&gt;communities in the Département “Bas-Rhin” in the region of Alsace in France&lt;/a&gt;. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rvest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tidyverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -122,7 +122,7 @@
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Modifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Let’s take another look at the cleaned data set.&lt;/p&gt;
+&lt;p&gt;The clean data set can be downloaded &lt;a href=&quot;http://localhost:4000/assets/data/bas_rhin.csv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## # A tibble: 514 x 11
 ##    nom   code_postal_1 code_postal_2 code_postal_3 code_insee
@@ -141,7 +141,6 @@
 ## #   canton &amp;lt;chr&amp;gt;, intercommunalité &amp;lt;chr&amp;gt;, superficie &amp;lt;dbl&amp;gt;,
 ## #   population &amp;lt;dbl&amp;gt;, densite &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This data could be used to to create a map of the region, colored by population density.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/webscraping_wikipedia/</link>
