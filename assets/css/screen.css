@@ -664,6 +664,8 @@ License: https://www.wowthemes.net/freebies-license/
 }
  .card .img-fluid {
     width:100%;
+    min-height: 300px;
+    max-height: auto;
 }
 .sticky-top-80 {
     top:80px;
