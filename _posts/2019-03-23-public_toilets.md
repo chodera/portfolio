@@ -91,7 +91,7 @@ ggmap(stras_map, extent = "device") +
             nudge_x = -0.004,
             nudge_y = +0.0007)
 
-# One toilet is not on the map, it is the one it Schiltigheim, which is in the northeast of Strasbourg
+# One toilet is not on the map, it is the one it Schiltigheim, which is in the north of Strasbourg.
 {% endhighlight %}
 
 Here is the final result:
