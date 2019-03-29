@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scraping a Wikipedia Table"
+title: "Scraping a Wikipedia table"
 output:
   html_document:
     df_print: paged
