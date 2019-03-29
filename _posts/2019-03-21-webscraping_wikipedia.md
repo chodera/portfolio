@@ -6,6 +6,7 @@ output:
     df_print: paged
 image: assets/images/wiki.png
 normal: true
+logo: r
 ---
 
 I tried the rvest package by scraping a Wikipedia table about [communities in the Département "Bas-Rhin" in the region of Alsace in France](https://fr.wikipedia.org/wiki/Liste_des_communes_du_Bas-Rhin){:target="_blank"}. First thing to do is to load the necessary packages: rvest for scraping the website, tidyverse to clean the scraped data.

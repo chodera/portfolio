@@ -10,7 +10,14 @@
         </div>
         <div class="card-body">
             <h2 class="card-title">
-                <a class="text-dark" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                <a class="text-dark" href="{{ post.url | absolute_url }}">
+                  {{ post.title }}
+                  {% if post.logo == "python" %}
+                  <img src="{{site.baseurl}}/assets/images/python.svg" width="6%" height="6%">
+                  {% else if post.logo == "r" %}
+                  <img src="{{site.baseurl}}/assets/images/r.svg" width="7%" height="7%">
+                  {% endif %}
+                  </a>
             </h2>
             <h4 class="card-text">{{ post.excerpt | strip_html | truncatewords:28 }}</h4>
         </div>
