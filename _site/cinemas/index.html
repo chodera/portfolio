@@ -13,8 +13,8 @@
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Cinemas in Strasbourg" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This post deals with the evolution of cinemas in Strasbourg. Data is from Centre national du cinéma et de l’image animée (CNC), and is available on the French open data platform data.gouv.fr. Today, there exist five movie theaters in the city of Strasbourg:" />
-<meta property="og:description" content="This post deals with the evolution of cinemas in Strasbourg. Data is from Centre national du cinéma et de l’image animée (CNC), and is available on the French open data platform data.gouv.fr. Today, there exist five movie theaters in the city of Strasbourg:" />
+<meta name="description" content="This post deals with the evolution of cinemas in Strasbourg. Today, there exist five movie theaters in the city of Strasbourg:" />
+<meta property="og:description" content="This post deals with the evolution of cinemas in Strasbourg. Today, there exist five movie theaters in the city of Strasbourg:" />
 <link rel="canonical" href="http://localhost:4000/cinemas/" />
 <meta property="og:url" content="http://localhost:4000/cinemas/" />
 <meta property="og:site_name" content="Portfolio" />
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-28T00:00:00+02:00" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cinemas/"},"@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"image":"http://localhost:4000/assets/images/cinema.jpg","url":"http://localhost:4000/cinemas/","headline":"Cinemas in Strasbourg","dateModified":"2019-04-28T00:00:00+02:00","datePublished":"2019-04-28T00:00:00+02:00","description":"This post deals with the evolution of cinemas in Strasbourg. Data is from Centre national du cinéma et de l’image animée (CNC), and is available on the French open data platform data.gouv.fr. Today, there exist five movie theaters in the city of Strasbourg:","@context":"http://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cinemas/"},"@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.png"}},"image":"http://localhost:4000/assets/images/cinema.jpg","url":"http://localhost:4000/cinemas/","headline":"Cinemas in Strasbourg","dateModified":"2019-04-28T00:00:00+02:00","datePublished":"2019-04-28T00:00:00+02:00","description":"This post deals with the evolution of cinemas in Strasbourg. Today, there exist five movie theaters in the city of Strasbourg:","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -159,7 +159,7 @@
 
 			<!-- Post Content -->
 			<div class="article-post">
-				<p>This post deals with the evolution of cinemas in Strasbourg. Data is from Centre national du cinéma et de l’image animée (CNC), and is available on the French open data platform <a href="https://www.data.gouv.fr/fr/datasets/r/1d1f7746-1229-454d-9597-6ec41cc0a9ca">data.gouv.fr</a>. Today, there exist five movie theaters in the city of Strasbourg:</p>
+				<p>This post deals with the evolution of cinemas in Strasbourg. Today, there exist five movie theaters in the city of Strasbourg:</p>
 
 <ul>
   <li>Star</li>
@@ -173,7 +173,122 @@
 
 <iframe style="width:100%;" height="400" src="/assets/leaflet/leaflet_cinemas" frameborder="0" allowfullscreen=""></iframe>
 
-<p>So there are five cinemas today. But how did the cinema landscape evolve over the last years in Strasbourg?</p>
+<p>But how did the cinema landscape evolve over the last years in Strasbourg? Appropriate data to answer this question comes from the Centre national du cinéma et de l’image animée (CNC) and is available on the French open data platform <a href="https://www.data.gouv.fr/fr/datasets/r/1d1f7746-1229-454d-9597-6ec41cc0a9ca">data.gouv.fr</a> (or can be downloaded <a href="http://localhost:4000/assets/data/Meilleures audiences en salles depuis 1945.xlsx">here</a>).</p>
+
+<p>As usual, we start by loading the necessary packages.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Load packages</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">nominatim</span><span class="p">)</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span></code></pre></figure>
+
+<p>Next, we define some helper function for cleaning and preparing the data in the original Excel sheet.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Define functions</span><span class="w">
+
+</span><span class="c1">## Load sheets from Excel file</span><span class="w">
+</span><span class="n">load_sheet</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">sheet_name</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">){</span><span class="w">
+  </span><span class="n">path</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"/home/david/Documents/GitHub/chodera.github.io/assets/projects/6. Cinemas in Strasbourg/"</span><span class="w">
+  </span><span class="n">sheet_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_excel</span><span class="p">(</span><span class="n">str_c</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="s2">"exploitation - données par commune.xlsx"</span><span class="p">),</span><span class="w"> </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sheet_name</span><span class="p">,</span><span class="w"> </span><span class="n">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">## Tidy sheets</span><span class="w">
+</span><span class="n">clean_sheet</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">sheet</span><span class="p">){</span><span class="w">
+  </span><span class="c1"># Get name of data frame</span><span class="w">
+  </span><span class="n">df_name</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">deparse</span><span class="p">(</span><span class="nf">substitute</span><span class="p">(</span><span class="n">sheet</span><span class="p">))</span><span class="w">
+
+  </span><span class="n">sheet</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sheet</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="c1"># Rename columns</span><span class="w">
+    </span><span class="n">rename</span><span class="p">(</span><span class="n">code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"...1"</span><span class="p">,</span><span class="w">
+           </span><span class="n">city</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"...2"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="c1"># Filter for Strasbourg</span><span class="w">
+    </span><span class="n">filter</span><span class="p">(</span><span class="n">city</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Strasbourg"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">gather</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"1960"</span><span class="o">:</span><span class="s2">"2017"</span><span class="p">),</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"col"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">code</span><span class="p">,</span><span class="w"> </span><span class="n">city</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+    </span><span class="n">mutate</span><span class="p">(</span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">year</span><span class="p">))</span><span class="w">
+
+  </span><span class="c1"># Set correct column name</span><span class="w">
+  </span><span class="nf">names</span><span class="p">(</span><span class="n">sheet</span><span class="p">)[</span><span class="nf">names</span><span class="p">(</span><span class="n">sheet</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"col"</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df_name</span><span class="w">
+
+  </span><span class="c1"># Assign changed data frame to original data frame</span><span class="w">
+  </span><span class="n">assign</span><span class="p">(</span><span class="n">df_name</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="p">,</span><span class="w"> </span><span class="n">envir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.GlobalEnv</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">## Set correct column names</span><span class="w">
+</span><span class="n">set_col</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">names</span><span class="p">){</span><span class="w">
+  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">list</span><span class="p">)){</span><span class="w">
+    </span><span class="nf">names</span><span class="p">(</span><span class="n">list</span><span class="p">[[</span><span class="n">i</span><span class="p">]])[[</span><span class="m">2</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sheet_names</span><span class="p">[[</span><span class="n">i</span><span class="p">]]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">list</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>Now we are ready to load and wrangle with the data.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Load data</span><span class="w">
+</span><span class="n">number_of_cinemas</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"établissements"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">screens</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"écrans"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">seats</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"fauteuils"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">multiplex</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"multiplexes"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">showing</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"séances"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">entries</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"entrées"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">revenue</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"recettes"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">avg_rev_per_entry</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"RME"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+</span><span class="n">frequentation_index</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"indice de fréquentation"</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">)</span><span class="w">
+</span><span class="n">occupancy_rate</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">load_sheet</span><span class="p">(</span><span class="s2">"taux d'occupation des fauteuils"</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Assign sheet_names to a vector</span><span class="w">
+</span><span class="n">sheet_names</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"number_of_cinemas"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"screens"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"seats"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"multiplex"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"showing"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"entries"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"revenue"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"avg_rev_per_entry"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"frequentation_index"</span><span class="p">,</span><span class="w">
+                 </span><span class="s2">"occupancy_rate"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Assign data frames to a list</span><span class="w">
+</span><span class="n">data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">number_of_cinemas</span><span class="p">,</span><span class="w">
+             </span><span class="n">screens</span><span class="p">,</span><span class="w">
+             </span><span class="n">seats</span><span class="p">,</span><span class="w">
+             </span><span class="n">multiplex</span><span class="p">,</span><span class="w">
+             </span><span class="n">showing</span><span class="p">,</span><span class="w">
+             </span><span class="n">entries</span><span class="p">,</span><span class="w">
+             </span><span class="n">revenue</span><span class="p">,</span><span class="w">
+             </span><span class="n">avg_rev_per_entry</span><span class="p">,</span><span class="w">
+             </span><span class="n">frequentation_index</span><span class="p">,</span><span class="w">
+             </span><span class="n">occupancy_rate</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">sheet_names</span><span class="w">
+
+</span><span class="c1"># Clean data</span><span class="w">
+</span><span class="n">clean_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">clean_sheet</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">set_col</span><span class="p">(</span><span class="n">sheet_names</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Join data frames</span><span class="w">
+</span><span class="n">cinemas_stras</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">left_join</span><span class="p">(</span><span class="n">clean_data</span><span class="o">$</span><span class="n">number_of_cinemas</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">screens</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">seats</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">multiplex</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">showing</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">entries</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">revenue</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">avg_rev_per_entry</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">frequentation_index</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
+  </span><span class="n">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">clean_data</span><span class="o">$</span><span class="n">occupancy_rate</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"year"</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Remove separate data frames</span><span class="w">
+</span><span class="n">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">sheet_names</span><span class="p">,</span><span class="w"> </span><span class="s2">"clean_data"</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">))</span></code></pre></figure>
+
+<p>After preparing the data, we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.</p>
+
+<p><img src="../assets/images/number_of_cinemas.png" alt="number_of_cinemas" /></p>
+
+<p>A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level.</p>
+
+<p>As a next step, a more profound analysis will be performed. It will include information on the number of entries, screens, movies shown, revenue, and occupancy rate.</p>
+
+<p>Get the full code <a href="http://localhost:4000/assets/projects/6. Cinemas in Strasbourg/cinemas_stras_20190506.R">here</a>.</p>
 
 			</div>
 

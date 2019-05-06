@@ -167,7 +167,6 @@
 </span><span class="n">library</span><span class="p">(</span><span class="n">httr</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
-</span><span class="n">library</span><span class="p">(</span><span class="n">osmdata</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">sf</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggmap</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">ggrepel</span><span class="p">)</span><span class="w">
@@ -221,7 +220,8 @@
 
 </span><span class="c1"># Second, get the background map</span><span class="w">
 </span><span class="c1"># Find coordinates with the website https://boundingbox.klokantech.com/</span><span class="w">
-</span><span class="n">stras_map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">get_map</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">7.716782</span><span class="p">,</span><span class="m">48.564086</span><span class="p">,</span><span class="m">7.787678</span><span class="p">,</span><span class="m">48.600426</span><span class="p">),</span><span class="w"> </span><span class="n">maptype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"toner-background"</span><span class="p">,</span><span class="w"> </span><span class="n">zoom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">)</span><span class="w">
+</span><span class="n">stras_map</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">get_map</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">7.716782</span><span class="p">,</span><span class="m">48.564086</span><span class="p">,</span><span class="m">7.787678</span><span class="p">,</span><span class="m">48.600426</span><span class="p">),</span><span class="w">
+                     </span><span class="n">maptype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"toner-background"</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># Third, combine the two geographic data sets</span><span class="w">
 </span><span class="n">ggmap</span><span class="p">(</span><span class="n">stras_map</span><span class="p">,</span><span class="w"> </span><span class="n">extent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"device"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
@@ -247,6 +247,8 @@
 <p><img src="../assets/images/toilettes.png" alt="toilet_map" /></p>
 
 <p>PS: Public toilets in France are <strong>free</strong>.</p>
+
+<p>Get the code <a href="http://localhost:4000/assets/projects/4. Public Toilets in Strasbourg/strasbourg_toilettes_20190506.R">here</a>.</p>
 
 			</div>
 

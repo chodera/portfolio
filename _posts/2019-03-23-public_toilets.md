@@ -19,7 +19,6 @@ I accessed the data by using an API and made a little map showing where to find 
 library(httr)
 library(jsonlite)
 library(tidyverse)
-library(osmdata)
 library(sf)
 library(ggmap)
 library(ggrepel)
@@ -73,7 +72,8 @@ toilettes_sf <- st_as_sf(toilettes_geo, coords = c("lon", "lat"),
 
 # Second, get the background map
 # Find coordinates with the website https://boundingbox.klokantech.com/
-stras_map <- get_map(c(7.716782,48.564086,7.787678,48.600426), maptype = "toner-background", zoom = 16)
+stras_map <- get_map(c(7.716782,48.564086,7.787678,48.600426),
+                     maptype = "toner-background")
 
 # Third, combine the two geographic data sets
 ggmap(stras_map, extent = "device") +
@@ -100,3 +100,5 @@ Here is the final result:
 ![toilet_map](../assets/images/toilettes.png)
 
 PS: Public toilets in France are **free**.
+
+Get the code [here]({{ site.url }}/assets/projects/4. Public Toilets in Strasbourg/strasbourg_toilettes_20190506.R).
