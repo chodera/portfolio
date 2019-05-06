@@ -9,7 +9,6 @@ bas_rhin <- read_csv("https://dwitkowski.eu/assets/data/bas_rhin.csv")
 
 # Get name column
 bas_rhin_noms <- bas_rhin %>%
-  filter(nom != "Bas-Rhin") %>% 
   pull(nom) 
 
 # First thing to clean up is possible extensions of the place names, such as river names (e.g. like sur-Zorn or les-Bains).

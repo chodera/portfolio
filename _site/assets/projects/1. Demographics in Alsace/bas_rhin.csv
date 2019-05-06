@@ -1,0 +1,514 @@
+"","nom","code_postal_1","code_postal_2","code_postal_3","code_insee","arrondissement","canton","intercommunalité","superficie","population","densite"
+"1","Strasbourg",67000,67100,67200,67482,"Strasbourg","Strasbourg-1","Eurométropole de Strasbourg",78.26,279284,3569
+"2","Achenheim",67204,NA,NA,67001,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",6.03,2082,345
+"3","Adamswiller",67320,NA,NA,67002,"Saverne","Ingwiller","CC de l'Alsace Bossue",3.4,377,111
+"4","Albé",67220,NA,NA,67003,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",10.83,456,42
+"5","Alteckendorf",67270,NA,NA,67005,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.72,884,155
+"6","Altenheim",67490,NA,NA,67006,"Saverne","Saverne","CC du Pays de Saverne",2.71,210,77
+"7","Altorf",67120,NA,NA,67008,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",10.19,1273,125
+"8","Altwiller",67260,NA,NA,67009,"Saverne","Ingwiller","CC de l'Alsace Bossue",16.22,406,25
+"9","Andlau",67140,NA,NA,67010,"Sélestat-Erstein","Obernai","CC du Pays de Barr",23.69,1744,74
+"10","Artolsheim",67390,NA,NA,67011,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",11.25,995,88
+"11","Aschbach",67250,NA,NA,67012,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",4.32,700,162
+"12","Asswiller",67320,NA,NA,67013,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.02,282,47
+"13","Avolsheim",67120,NA,NA,67016,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",1.83,727,397
+"14","Baerendorf",67320,NA,NA,67017,"Saverne","Ingwiller","CC de l'Alsace Bossue",7.53,308,41
+"15","Balbronn",67310,NA,NA,67018,"Molsheim","Saverne","CC de la Mossig et du Vignoble",10.18,649,64
+"16","Baldenheim",67600,NA,NA,67019,"Sélestat-Erstein","Sélestat","CC de Sélestat",9.44,1161,123
+"17","Barembach",67130,NA,NA,67020,"Molsheim","Mutzig","CC de la Vallée de la Bruche",9.92,892,90
+"18","Barr",67140,NA,NA,67021,"Sélestat-Erstein","Obernai","CC du Pays de Barr",20.61,7215,350
+"19","Bassemberg",67220,NA,NA,67022,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",1.78,255,143
+"20","Batzendorf",67500,NA,NA,67023,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",6.74,993,147
+"21","Beinheim",67930,NA,NA,67025,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",15.23,1869,123
+"22","Bellefosse",67130,NA,NA,67026,"Molsheim","Mutzig","CC de la Vallée de la Bruche",7.34,149,20
+"23","Belmont",67130,NA,NA,67027,"Molsheim","Mutzig","CC de la Vallée de la Bruche",10.34,162,16
+"24","Benfeld",67230,NA,NA,67028,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",7.79,5738,737
+"25","Berg",67320,NA,NA,67029,"Saverne","Ingwiller","CC de l'Alsace Bossue",7.72,367,48
+"26","Bergbieten",67310,NA,NA,67030,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",4.24,699,165
+"27","Bernardswiller",67210,NA,NA,67031,"Sélestat-Erstein","Obernai","CC du Pays de Sainte-Odile",5.53,1457,263
+"28","Bernardvillé",67140,NA,NA,67032,"Sélestat-Erstein","Obernai","CC du Pays de Barr",2.76,230,83
+"29","Bernolsheim",67170,NA,NA,67033,"Haguenau-Wissembourg","Brumath","CA de Haguenau",3.39,602,178
+"30","Berstett",67370,NA,NA,67034,"Saverne","Bouxwiller","CC du Kochersberg",17.88,2425,136
+"31","Berstheim",67170,NA,NA,67035,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",3.09,438,142
+"32","Betschdorf",67660,NA,NA,67339,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",28.11,4137,147
+"33","Bettwiller",67320,NA,NA,67036,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.06,309,76
+"34","Biblisheim",67360,NA,NA,67037,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",2.24,349,156
+"35","Bietlenheim",67720,NA,NA,67038,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",2.13,266,125
+"36","Bilwisheim",67170,NA,NA,67039,"Haguenau-Wissembourg","Brumath","CA de Haguenau",2.56,463,181
+"37","Bindernheim",67600,NA,NA,67040,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",6.62,1025,155
+"38","Bischheim",67800,NA,NA,67043,"Strasbourg","Schiltigheim","Eurométropole de Strasbourg",4.41,17180,3896
+"39","Bischholtz",67340,NA,NA,67044,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",2.39,280,117
+"40","Bischoffsheim",67870,NA,NA,67045,"Molsheim","Molsheim","CC des Portes de Rosheim",12.33,3332,270
+"41","Bischwiller",67240,NA,NA,67046,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",17.25,12561,728
+"42","Bissert",67260,NA,NA,67047,"Saverne","Ingwiller","CC de l'Alsace Bossue",3.37,156,46
+"43","Bitschhoffen",67350,NA,NA,67048,"Haguenau-Wissembourg","Reichshoffen","CA de Haguenau",2.54,452,178
+"44","Blaesheim",67113,NA,NA,67049,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",9.96,1325,133
+"45","Blancherupt",67130,NA,NA,67050,"Molsheim","Mutzig","CC de la Vallée de la Bruche",2.65,38,14
+"46","Blienschwiller",67650,NA,NA,67051,"Sélestat-Erstein","Obernai","CC du Pays de Barr",3.07,325,106
+"47","Bœrsch",67530,NA,NA,67052,"Molsheim","Molsheim","CC des Portes de Rosheim",23.39,2432,104
+"48","Bœsenbiesen",67390,NA,NA,67053,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",3.81,316,83
+"49","Bolsenheim",67150,NA,NA,67054,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",4.35,517,119
+"50","Boofzheim",67860,NA,NA,67055,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",11.94,1363,114
+"51","Bootzheim",67390,NA,NA,67056,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",5.91,724,123
+"52","Bosselshausen",67330,NA,NA,67057,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",3.29,162,49
+"53","Bossendorf",67270,NA,NA,67058,"Saverne","Bouxwiller","CC du Pays de la Zorn",3.98,399,100
+"54","Bourg-Bruche",67420,NA,NA,67059,"Molsheim","Mutzig","CC de la Vallée de la Bruche",15.02,469,31
+"55","Bourgheim",67140,NA,NA,67060,"Sélestat-Erstein","Obernai","CC du Pays de Barr",2.83,616,218
+"56","Bouxwiller",67330,NA,NA,67061,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",25.59,4062,159
+"57","Breitenau",67220,NA,NA,67062,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",4.29,305,71
+"58","Breitenbach",67220,NA,NA,67063,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",11.73,674,57
+"59","Breuschwickersheim",67112,NA,NA,67065,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",5.06,1258,249
+"60","Brumath",67170,NA,NA,67067,"Haguenau-Wissembourg","Brumath","CA de Haguenau",29.54,9913,336
+"61","Buhl",67470,NA,NA,67069,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",4.4,526,120
+"62","Burbach",67260,NA,NA,67070,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.34,271,43
+"63","Bust",67320,NA,NA,67071,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.76,459,68
+"64","Buswiller",67350,NA,NA,67068,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",2.3,271,118
+"65","Butten",67430,NA,NA,67072,"Saverne","Ingwiller","CC de l'Alsace Bossue",15.19,674,44
+"66","Châtenois",67730,NA,NA,67073,"Sélestat-Erstein","Sélestat","CC de Sélestat",14.57,4158,285
+"67","Cleebourg",67160,NA,NA,67074,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",10.59,722,68
+"68","Climbach",67510,NA,NA,67075,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",7.15,444,62
+"69","Colroy-la-Roche",67420,NA,NA,67076,"Molsheim","Mutzig","CC de la Vallée de la Bruche",8.18,491,60
+"70","Cosswiller",67310,NA,NA,67077,"Molsheim","Saverne","CC de la Mossig et du Vignoble",15.75,568,36
+"71","Crastatt",67310,NA,NA,67078,"Molsheim","Saverne","CC de la Mossig et du Vignoble",3.39,270,80
+"72","Crœttwiller",67470,NA,NA,67079,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",2.55,173,68
+"73","Dachstein",67120,NA,NA,67080,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",7.46,1810,243
+"74","Dahlenheim",67310,NA,NA,67081,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",5.35,755,141
+"75","Dalhunden",67770,NA,NA,67082,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",7.45,1119,150
+"76","Dambach",67110,NA,NA,67083,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",30.5,741,24
+"77","Dambach-la-Ville",67650,NA,NA,67084,"Sélestat-Erstein","Obernai","CC du Pays de Barr",28.83,2154,75
+"78","Dangolsheim",67310,NA,NA,67085,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",4.47,730,163
+"79","Daubensand",67150,NA,NA,67086,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",3.87,389,101
+"80","Dauendorf",67350,NA,NA,67087,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",7.63,1444,189
+"81","Dehlingen",67430,NA,NA,67088,"Saverne","Ingwiller","CC de l'Alsace Bossue",10.02,361,36
+"82","Dettwiller",67490,NA,NA,67089,"Saverne","Saverne","CC du Pays de Saverne",10.77,2614,243
+"83","Diebolsheim",67230,NA,NA,67090,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",7.03,704,100
+"84","Diedendorf",67260,NA,NA,67091,"Saverne","Ingwiller","CC de l'Alsace Bossue",10.11,322,32
+"85","Dieffenbach-au-Val",67220,NA,NA,67092,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",2.95,627,213
+"86","Dieffenbach-lès-Wœrth",67360,NA,NA,67093,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",3.61,352,98
+"87","Dieffenthal",67650,NA,NA,67094,"Sélestat-Erstein","Sélestat","CC de Sélestat",1.51,257,170
+"88","Diemeringen",67430,NA,NA,67095,"Saverne","Ingwiller","CC de l'Alsace Bossue",8.81,1613,183
+"89","Dimbsthal",67440,NA,NA,67096,"Saverne","Saverne","CC du Pays de Saverne",1.91,310,162
+"90","Dingsheim",67370,NA,NA,67097,"Saverne","Bouxwiller","CC du Kochersberg",4.95,1300,263
+"91","Dinsheim-sur-Bruche",67190,NA,NA,67098,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",4.98,1447,291
+"92","Domfessel",67430,NA,NA,67099,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.23,290,47
+"93","Donnenheim",67170,NA,NA,67100,"Haguenau-Wissembourg","Brumath","CA de Haguenau",3.76,345,92
+"94","Dorlisheim",67120,NA,NA,67101,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",11.53,2618,227
+"95","Dossenheim-Kochersberg",67117,NA,NA,67102,"Saverne","Bouxwiller","CC du Kochersberg",1.79,285,159
+"96","Dossenheim-sur-Zinsel",67330,NA,NA,67103,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",17.2,1074,62
+"97","Drachenbronn-Birlenbach",67160,NA,NA,67104,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",7.13,838,118
+"98","Drulingen",67320,NA,NA,67105,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.49,1476,329
+"99","Drusenheim",67410,NA,NA,67106,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",15.73,5097,324
+"100","Duntzenheim",67270,NA,NA,67107,"Saverne","Bouxwiller","CC du Pays de la Zorn",6.21,634,102
+"101","Duppigheim",67120,NA,NA,67108,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",7.38,1587,215
+"102","Durningen",67270,NA,NA,67109,"Saverne","Bouxwiller","CC du Kochersberg",4.02,634,158
+"103","Durrenbach",67360,NA,NA,67110,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",5.3,1079,204
+"104","Durstel",67320,NA,NA,67111,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.76,406,85
+"105","Duttlenheim",67120,NA,NA,67112,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",8.6,2886,336
+"106","Eberbach-Seltz",67470,NA,NA,67113,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",4.14,418,101
+"107","Ebersheim",67600,NA,NA,67115,"Sélestat-Erstein","Sélestat","CC de Sélestat",13.66,2239,164
+"108","Ebersmunster",67600,NA,NA,67116,"Sélestat-Erstein","Sélestat","CC de Sélestat",7.39,516,70
+"109","Eckartswiller",67700,NA,NA,67117,"Saverne","Saverne","CC du Pays de Saverne",12.43,425,34
+"110","Eckbolsheim",67201,NA,NA,67118,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",5.34,6729,1260
+"111","Eckwersheim",67550,NA,NA,67119,"Strasbourg","Brumath","Eurométropole de Strasbourg",7.46,1315,176
+"112","Eichhoffen",67140,NA,NA,67120,"Sélestat-Erstein","Obernai","CC du Pays de Barr",2.3,538,234
+"113","Elsenheim",67390,NA,NA,67121,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",9.61,823,86
+"114","Engwiller",67350,NA,NA,67123,"Haguenau-Wissembourg","Reichshoffen","CA de Haguenau",3.74,503,134
+"115","Entzheim",67960,NA,NA,67124,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",8.17,2268,278
+"116","Epfig",67680,NA,NA,67125,"Sélestat-Erstein","Obernai","CC du Pays de Barr",21.9,2274,104
+"117","Erckartswiller",67290,NA,NA,67126,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",10.46,303,29
+"118","Ergersheim",67120,NA,NA,67127,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",6.51,1325,204
+"119","Ernolsheim-Bruche",67120,NA,NA,67128,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",6.59,1851,281
+"120","Ernolsheim-lès-Saverne",67330,NA,NA,67129,"Saverne","Saverne","CC du Pays de Saverne",10.94,587,54
+"121","Erstein",67150,NA,NA,67130,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",36.22,10669,295
+"122","Eschau",67114,NA,NA,67131,"Strasbourg","Illkirch-Graffenstaden","Eurométropole de Strasbourg",11.83,5102,431
+"123","Eschbach",67360,NA,NA,67132,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",3.97,930,234
+"124","Eschbourg",67320,NA,NA,67133,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",14.05,483,34
+"125","Eschwiller",67320,NA,NA,67134,"Saverne","Ingwiller","CC de l'Alsace Bossue",3.49,183,52
+"126","Ettendorf",67350,NA,NA,67135,"Saverne","Bouxwiller","CC du Pays de la Zorn",6.34,775,122
+"127","Eywiller",67320,NA,NA,67136,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.69,283,60
+"128","Fegersheim",67640,NA,NA,67137,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",6.25,5714,914
+"129","Fessenheim-le-Bas",67117,NA,NA,67138,"Saverne","Bouxwiller","CC du Kochersberg",4.95,552,112
+"130","Flexbourg",67310,NA,NA,67139,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",1.7,465,274
+"131","Forstfeld",67480,NA,NA,67140,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",4.9,728,149
+"132","Forstheim",67580,NA,NA,67141,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",5.05,577,114
+"133","Fort-Louis",67480,NA,NA,67142,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",12.31,299,24
+"134","Fouchy",67220,NA,NA,67143,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",7.87,663,84
+"135","Fouday",67130,NA,NA,67144,"Molsheim","Mutzig","CC de la Vallée de la Bruche",2.05,347,169
+"136","Friedolsheim",67490,NA,NA,67145,"Saverne","Saverne","CC du Pays de Saverne",3.52,239,68
+"137","Friesenheim",67860,NA,NA,67146,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",12.03,623,52
+"138","Frohmuhl",67290,NA,NA,67148,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",1.64,183,112
+"139","Frœschwiller",67360,NA,NA,67147,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",5.75,505,88
+"140","Furchhausen",67700,NA,NA,67149,"Saverne","Saverne","CC du Pays de Saverne",2.86,415,145
+"141","Furdenheim",67117,NA,NA,67150,"Saverne","Bouxwiller","CC du Kochersberg",5.81,1317,227
+"142","Gambsheim",67760,NA,NA,67151,"Haguenau-Wissembourg","Brumath","CC du Pays Rhénan",17.38,4804,276
+"143","Geispolsheim",67118,NA,NA,67152,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",21.95,7476,341
+"144","Geiswiller-Zœbersdorf",67270,NA,NA,67153,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.05,397,79
+"145","Gerstheim",67150,NA,NA,67154,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",16.42,3434,209
+"146","Gertwiller",67140,NA,NA,67155,"Sélestat-Erstein","Obernai","CC du Pays de Barr",4.89,1256,257
+"147","Geudertheim",67170,NA,NA,67156,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",11.27,2439,216
+"148","Gœrlingen",67320,NA,NA,67159,"Saverne","Ingwiller","CC de l'Alsace Bossue",3.77,238,63
+"149","Gœrsdorf",67360,NA,NA,67160,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",13.14,1078,82
+"150","Gottenhouse",67700,NA,NA,67161,"Saverne","Saverne","CC du Pays de Saverne",1.25,386,309
+"151","Gottesheim",67490,NA,NA,67162,"Saverne","Saverne","CC du Pays de Saverne",5.11,341,67
+"152","Gougenheim",67270,NA,NA,67163,"Saverne","Bouxwiller","CC du Kochersberg",6.58,550,84
+"153","Goxwiller",67210,NA,NA,67164,"Sélestat-Erstein","Obernai","CC du Pays de Barr",3.3,848,257
+"154","Grandfontaine",67130,NA,NA,67165,"Molsheim","Mutzig","CC de la Vallée de la Bruche",39.52,410,10
+"155","Grassendorf",67350,NA,NA,67166,"Saverne","Bouxwiller","CC du Pays de la Zorn",2.24,249,111
+"156","Grendelbruch",67190,NA,NA,67167,"Molsheim","Molsheim","CC des Portes de Rosheim",14.63,1209,83
+"157","Gresswiller",67190,NA,NA,67168,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",9.27,1696,183
+"158","Gries",67240,NA,NA,67169,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",12.23,2861,234
+"159","Griesheim-près-Molsheim",67870,NA,NA,67172,"Molsheim","Molsheim","CC des Portes de Rosheim",4.62,2164,468
+"160","Griesheim-sur-Souffel",67370,NA,NA,67173,"Saverne","Bouxwiller","CC du Kochersberg",4.19,1115,266
+"161","Gumbrechtshoffen",67110,NA,NA,67174,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",5.74,1171,204
+"162","Gundershoffen",67110,NA,NA,67176,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",17.55,3656,208
+"163","Gungwiller",67320,NA,NA,67178,"Saverne","Ingwiller","CC de l'Alsace Bossue",1.65,280,170
+"164","Gunstett",67360,NA,NA,67177,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",6.3,662,105
+"165","Haegen",67700,NA,NA,67179,"Saverne","Saverne","CC du Pays de Saverne",20.32,691,34
+"166","Haguenau",67500,NA,NA,67180,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",182.59,34460,189
+"167","Handschuheim",67117,NA,NA,67181,"Saverne","Bouxwiller","CC du Kochersberg",2.4,274,114
+"168","Hangenbieten",67980,NA,NA,67182,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",4.11,1508,367
+"169","Harskirchen",67260,NA,NA,67183,"Saverne","Ingwiller","CC de l'Alsace Bossue",14.42,855,59
+"170","Hatten",67690,NA,NA,67184,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",18.91,1921,102
+"171","Hattmatt",67330,NA,NA,67185,"Saverne","Saverne","CC du Pays de Saverne",4.15,681,164
+"172","Hegeney",67360,NA,NA,67186,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",1.76,420,239
+"173","Heidolsheim",67390,NA,NA,67187,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",5.92,514,87
+"174","Heiligenberg",67190,NA,NA,67188,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",5.47,659,120
+"175","Heiligenstein",67140,NA,NA,67189,"Sélestat-Erstein","Obernai","CC du Pays de Barr",3.99,957,240
+"176","Hengwiller",67440,NA,NA,67190,"Saverne","Saverne","CC du Pays de Saverne",2.15,188,87
+"177","Herbitzheim",67260,NA,NA,67191,"Saverne","Ingwiller","CC de l'Alsace Bossue",21.73,1851,85
+"178","Herbsheim",67230,NA,NA,67192,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",8.6,916,107
+"179","Herrlisheim",67850,NA,NA,67194,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",14.38,4864,338
+"180","Hessenheim",67390,NA,NA,67195,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",5.21,621,119
+"181","Hilsenheim",67600,NA,NA,67196,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",19.91,2653,133
+"182","Hindisheim",67150,NA,NA,67197,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",11.84,1464,124
+"183","Hinsbourg",67290,NA,NA,67198,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",3.28,113,34
+"184","Hinsingen",67260,NA,NA,67199,"Saverne","Ingwiller","CC de l'Alsace Bossue",2.98,89,30
+"185","Hipsheim",67150,NA,NA,67200,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",4.52,1015,225
+"186","Hirschland",67320,NA,NA,67201,"Saverne","Ingwiller","CC de l'Alsace Bossue",10.73,332,31
+"187","Hochfleden",67270,NA,NA,67202,"Saverne","Bouxwiller","CC du Pays de la Zorn",15.76,3958,251
+"188","Hochstett",67170,NA,NA,67203,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",2.13,367,172
+"189","Hœnheim",67800,NA,NA,67204,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",3.42,11191,3272
+"190","Hœrdt",67720,NA,NA,67205,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",16.56,4324,261
+"191","Hoffen",67250,NA,NA,67206,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",9.45,1131,120
+"192","Hohengœft",67310,NA,NA,67208,"Molsheim","Saverne","CC de la Mossig et du Vignoble",3.43,527,154
+"193","Hohfrankenheim",67270,NA,NA,67209,"Saverne","Bouxwiller","CC du Pays de la Zorn",2.76,260,94
+"194","Le Hohwald",67140,NA,NA,67210,"Sélestat-Erstein","Obernai","CC du Pays de Barr",20.84,503,24
+"195","Holtzheim",67810,NA,NA,67212,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",6.91,3617,523
+"196","Hunspach",67250,NA,NA,67213,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",5.49,637,116
+"197","Hurtigheim",67117,NA,NA,67214,"Saverne","Bouxwiller","CC du Kochersberg",4.63,745,161
+"198","Huttendorf",67270,NA,NA,67215,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",4.4,509,116
+"199","Huttenheim",67230,NA,NA,67216,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",12.55,2705,216
+"200","Ichtratzheim",67640,NA,NA,67217,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",3.09,308,100
+"201","Illkirch-Graffenstaden",67400,NA,NA,67218,"Strasbourg","Illkirch-Graffenstaden","Eurométropole de Strasbourg",22.21,26837,1208
+"202","Ingenheim",67270,NA,NA,67220,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.37,326,61
+"203","Ingolsheim",67250,NA,NA,67221,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",4.46,305,68
+"204","Ingwiller",67340,NA,NA,67222,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",18.05,4065,225
+"205","Innenheim",67880,NA,NA,67223,"Sélestat-Erstein","Molsheim","CC du Pays de Sainte-Odile",6.24,1186,190
+"206","Issenhausen",67330,NA,NA,67225,"Saverne","Bouxwiller","CC du Pays de la Zorn",2.1,108,51
+"207","Ittenheim",67117,NA,NA,67226,"Saverne","Bouxwiller","CC du Kochersberg",6.71,2125,317
+"208","Itterswiller",67140,NA,NA,67227,"Sélestat-Erstein","Obernai","CC du Pays de Barr",1.18,242,205
+"209","Jetterswiller",67440,NA,NA,67229,"Molsheim","Saverne","CC de la Mossig et du Vignoble",3.54,191,54
+"210","Kaltenhouse",67240,NA,NA,67230,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",3.72,2232,600
+"211","Kauffenheim",67480,NA,NA,67231,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",2.24,213,95
+"212","Keffenach",67250,NA,NA,67232,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",2.39,187,78
+"213","Kertzfeld",67230,NA,NA,67233,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",9.43,1236,131
+"214","Keskastel",67260,NA,NA,67234,"Saverne","Ingwiller","CC de l'Alsace Bossue",18.87,1532,81
+"215","Kesseldorf",67930,NA,NA,67235,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",7.26,408,56
+"216","Kienheim",67270,NA,NA,67236,"Saverne","Bouxwiller","CC du Kochersberg",3.18,565,178
+"217","Kilstett",67840,NA,NA,67237,"Haguenau-Wissembourg","Brumath","CC du Pays Rhénan",6.9,2538,368
+"218","Kindwiller",67350,NA,NA,67238,"Haguenau-Wissembourg","Reichshoffen","CA de Haguenau",5.97,635,106
+"219","Kintzheim",67600,NA,NA,67239,"Sélestat-Erstein","Sélestat","CC de Sélestat",18.78,1621,86
+"220","Kirchheim",67520,NA,NA,67240,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",2.3,690,300
+"221","Kirrberg",67320,NA,NA,67241,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.35,168,26
+"222","Kirrwiller",67330,NA,NA,67242,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",4.89,553,113
+"223","Kleingœft",67440,NA,NA,67244,"Saverne","Saverne","CC du Pays de Saverne",2.5,156,62
+"224","Knœrsheim",67310,NA,NA,67245,"Molsheim","Saverne","CC de la Mossig et du Vignoble",2.36,225,95
+"225","Kogenheim",67230,NA,NA,67246,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",11.77,1241,105
+"226","Kolbsheim",67120,NA,NA,67247,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",3.33,940,282
+"227","Krautergersheim",67880,NA,NA,67248,"Sélestat-Erstein","Obernai","CC du Pays de Sainte-Odile",6.37,1662,261
+"228","Krautwiller",67170,NA,NA,67249,"Haguenau-Wissembourg","Brumath","CA de Haguenau",1.48,235,159
+"229","Kriegsheim",67170,NA,NA,67250,"Haguenau-Wissembourg","Brumath","CA de Haguenau",3.93,783,199
+"230","Kurtzenhouse",67240,NA,NA,67252,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",3.58,1049,293
+"231","Kuttolsheim",67520,NA,NA,67253,"Saverne","Bouxwiller","CC du Kochersberg",4.59,628,137
+"232","Kutzenhausen",67250,NA,NA,67254,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",7.2,919,128
+"233","Lalaye",67220,NA,NA,67255,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",8.18,471,58
+"234","Lampertheim",67450,NA,NA,67256,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",6.58,3004,457
+"235","Lampertsloch",67250,NA,NA,67257,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",10.43,732,70
+"236","Landersheim",67700,NA,NA,67258,"Saverne","Saverne","CC du Pays de Saverne",2.13,203,95
+"237","Langensoultzbach",67360,NA,NA,67259,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",13.09,937,72
+"238","Laubach",67580,NA,NA,67260,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",1.69,319,189
+"239","Lauterbourg",67630,NA,NA,67261,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",11.25,2291,204
+"240","Lembach",67510,NA,NA,67263,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",48.89,1560,32
+"241","Leutenheim",67480,NA,NA,67264,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",10.39,843,81
+"242","Lichtenberg",67340,NA,NA,67265,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",12.12,559,46
+"243","Limersheim",67150,NA,NA,67266,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",5.58,661,118
+"244","Lingolsheim",67380,NA,NA,67267,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",5.69,18569,3263
+"245","Lipsheim",67640,NA,NA,67268,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",4.96,2568,518
+"246","Littenheim",67490,NA,NA,67269,"Saverne","Saverne","CC du Pays de Saverne",4.21,284,67
+"247","Lixhausen",67270,NA,NA,67270,"Saverne","Bouxwiller","CC du Pays de la Zorn",3.29,374,114
+"248","Lobsann",67250,NA,NA,67271,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",2.73,638,234
+"249","Lochwiller",67440,NA,NA,67272,"Saverne","Saverne","CC du Pays de Saverne",4.63,428,92
+"250","Lohr",67290,NA,NA,67273,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",10.41,498,48
+"251","Lorentzen",67430,NA,NA,67274,"Saverne","Ingwiller","CC de l'Alsace Bossue",7.85,238,30
+"252","Lupstein",67490,NA,NA,67275,"Saverne","Saverne","CC du Pays de Saverne",7.82,788,101
+"253","Lutzelhouse",67130,NA,NA,67276,"Molsheim","Mutzig","CC de la Vallée de la Bruche",28.58,1904,67
+"254","Mackenheim",67390,NA,NA,67277,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",11.79,761,65
+"255","Mackwiller",67430,NA,NA,67278,"Saverne","Ingwiller","CC de l'Alsace Bossue",9.02,589,65
+"256","Maennolsheim",67700,NA,NA,67279,"Saverne","Saverne","CC du Pays de Saverne",2.74,232,85
+"257","Maisonsgoutte",67220,NA,NA,67280,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",4.87,804,165
+"258","Marckolsheim",67390,NA,NA,67281,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",33.36,4142,124
+"259","Marlenheim",67520,NA,NA,67282,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",14.59,4234,290
+"260","Marmoutier",67440,NA,NA,67283,"Saverne","Saverne","CC du Pays de Saverne",14.07,2705,192
+"261","Matzenheim",67150,NA,NA,67285,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",7.14,1418,199
+"262","Meistratzheim",67210,NA,NA,67286,"Sélestat-Erstein","Obernai","CC du Pays de Sainte-Odile",12.82,1469,115
+"263","Melsheim",67270,NA,NA,67287,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.21,585,112
+"264","Memmelshoffen",67250,NA,NA,67288,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",1.82,332,182
+"265","Menchhoffen",67340,NA,NA,67289,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",4.27,603,141
+"266","Merkwiller-Pechelbronn",67250,NA,NA,67290,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",3.76,919,244
+"267","Mertzwiller",67580,NA,NA,67291,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",6.96,3360,483
+"268","Mietesheim",67580,NA,NA,67292,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",8.49,669,79
+"269","Minversheim",67270,NA,NA,67293,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.45,668,123
+"270","Mittelbergheim",67140,NA,NA,67295,"Sélestat-Erstein","Obernai","CC du Pays de Barr",3.83,658,172
+"271","Mittelhausbergen",67206,NA,NA,67296,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",1.72,1934,1124
+"272","Mittelschaeffolsheim",67170,NA,NA,67298,"Haguenau-Wissembourg","Brumath","CA de Haguenau",2.64,564,214
+"273","Mollkirch",67190,NA,NA,67299,"Molsheim","Molsheim","CC des Portes de Rosheim",12.47,928,74
+"274","Molsheim",67120,NA,NA,67300,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",10.85,9286,856
+"275","Mommenheim",67670,NA,NA,67301,"Haguenau-Wissembourg","Brumath","CA de Haguenau",8.16,1815,222
+"276","Monswiller",67700,NA,NA,67302,"Saverne","Saverne","CC du Pays de Saverne",4.72,2109,447
+"277","Morsbronn-les-Bains",67360,NA,NA,67303,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",6.87,678,99
+"278","Morschwiller",67350,NA,NA,67304,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",4.62,595,129
+"279","Mothern",67470,NA,NA,67305,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",10.3,2033,197
+"280","Muhlbach-sur-Bruche",67130,NA,NA,67306,"Molsheim","Mutzig","CC de la Vallée de la Bruche",8.38,648,77
+"281","Mulhausen",67350,NA,NA,67307,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",4,480,120
+"282","Munchhausen",67470,NA,NA,67308,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",5.92,732,124
+"283","Mundolsheim",67450,NA,NA,67309,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",4.09,4741,1159
+"284","Mussig",67600,NA,NA,67310,"Sélestat-Erstein","Sélestat","CC de Sélestat",11.73,1143,97
+"285","Muttersholtz",67600,NA,NA,67311,"Sélestat-Erstein","Sélestat","CC de Sélestat",12.67,2023,160
+"286","Mutzenhouse",67270,NA,NA,67312,"Saverne","Bouxwiller","CC du Pays de la Zorn",2.21,452,205
+"287","Mutzig",67190,NA,NA,67313,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",8.01,5992,748
+"288","Natzwiller",67130,NA,NA,67314,"Molsheim","Mutzig","CC de la Vallée de la Bruche",7.29,548,75
+"289","Neewiller-près-Lauterbourg",67630,NA,NA,67315,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",7.34,648,88
+"290","Neubois",67220,NA,NA,67317,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",11.42,695,61
+"291","Neugartheim-Ittlenheim",67370,NA,NA,67228,"Saverne","Bouxwiller","CC du Kochersberg",4.06,797,196
+"292","Neuhaeusel",67480,NA,NA,67319,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",3.05,344,113
+"293","Neuve-Église",67220,NA,NA,67320,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",5.48,631,115
+"294","Neuviller-la-Roche",67130,NA,NA,67321,"Molsheim","Mutzig","CC de la Vallée de la Bruche",9.19,349,38
+"295","Neuwiller-lès-Saverne",67330,NA,NA,67322,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",31.89,1119,35
+"296","Niederbronn-les-Bains",67110,NA,NA,67324,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",31.4,4395,140
+"297","Niederhaslach",67280,NA,NA,67325,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",6.63,1411,213
+"298","Niederhausbergen",67207,NA,NA,67326,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",3.06,1522,497
+"299","Niederlauterbach",67630,NA,NA,67327,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",11.22,967,86
+"300","Niedermodern",67350,NA,NA,67328,"Haguenau-Wissembourg","Reichshoffen","CA de Haguenau",4.39,931,212
+"301","Niedernai",67210,NA,NA,67329,"Sélestat-Erstein","Obernai","CC du Pays de Sainte-Odile",11.33,1244,110
+"302","Niederrœdern",67470,NA,NA,67330,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",6.88,920,134
+"303","Niederschaeffolsheim",67500,NA,NA,67331,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",6.24,1376,221
+"304","Niedersoultzbach",67330,NA,NA,67333,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",4.19,265,63
+"305","Niedersteinbach",67510,NA,NA,67334,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",8.3,126,15
+"306","Nordheim",67520,NA,NA,67335,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",6.32,880,139
+"307","Nordhouse",67150,NA,NA,67336,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",11,1731,157
+"308","Nothalten",67680,NA,NA,67337,"Sélestat-Erstein","Obernai","CC du Pays de Barr",4,458,115
+"309","Obenheim",67230,NA,NA,67338,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",7.99,1380,173
+"310","Oberbronn",67110,NA,NA,67340,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",21.15,1561,74
+"311","Oberdorf-Spachbach",67360,NA,NA,67341,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",2.36,363,154
+"312","Oberhaslach",67280,NA,NA,67342,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",25.22,1771,70
+"313","Oberhausbergen",67205,NA,NA,67343,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",3.79,5383,1420
+"314","Oberhoffen-lès-Wissembourg",67160,NA,NA,67344,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",3.03,332,110
+"315","Oberhoffen-sur-Moder",67240,NA,NA,67345,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",14.25,3464,243
+"316","Oberlauterbach",67160,NA,NA,67346,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",5.32,536,101
+"317","Obermodern-Zutzendorf",67330,NA,NA,67347,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",14.46,1676,116
+"318","Obernai",67210,NA,NA,67348,"Sélestat-Erstein","Obernai","CC du Pays de Sainte-Odile",25.74,10953,426
+"319","Oberrœdern",67250,NA,NA,67349,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",5,531,106
+"320","Oberschaeffolsheim",67203,NA,NA,67350,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",7.56,2313,306
+"321","Obersoultzbach",67330,NA,NA,67352,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",5.16,433,84
+"322","Obersteinbach",67510,NA,NA,67353,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",9.18,224,24
+"323","Odratzheim",67520,NA,NA,67354,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",1.54,488,317
+"324","Oermingen",67970,NA,NA,67355,"Saverne","Ingwiller","CC de l'Alsace Bossue",14.63,1252,86
+"325","Offendorf",67850,NA,NA,67356,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",14.22,2488,175
+"326","Offwiller",67340,NA,NA,67358,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",15.92,804,51
+"327","Ohlungen",67590,67170,NA,67359,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",8.39,1307,156
+"328","Ohnenheim",67390,NA,NA,67360,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",12.12,1015,84
+"329","Olwisheim",67170,NA,NA,67361,"Haguenau-Wissembourg","Brumath","CA de Haguenau",2.96,494,167
+"330","Orschwiller",67600,NA,NA,67362,"Sélestat-Erstein","Sélestat","CC de Sélestat",6.32,608,96
+"331","Osthoffen",67990,NA,NA,67363,"Strasbourg","Lingolsheim","Eurométropole de Strasbourg",5.11,829,162
+"332","Osthouse",67150,NA,NA,67364,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",9.72,923,95
+"333","Ostwald",67540,NA,NA,67365,"Strasbourg","Illkirch-Graffenstaden","Eurométropole de Strasbourg",7.11,12714,1788
+"334","Ottersthal",67700,NA,NA,67366,"Saverne","Saverne","CC du Pays de Saverne",3.13,678,217
+"335","Otterswiller",67700,NA,NA,67367,"Saverne","Saverne","CC du Pays de Saverne",3.28,1346,410
+"336","Ottrott",67530,NA,NA,67368,"Molsheim","Molsheim","CC des Portes de Rosheim",28.89,1548,54
+"337","Ottwiller",67320,NA,NA,67369,"Saverne","Ingwiller","CC de l'Alsace Bossue",5.09,260,51
+"338","Petersbach",67290,NA,NA,67370,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",8.88,640,72
+"339","La Petite-Pierre",67290,NA,NA,67371,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",19.57,624,32
+"340","Pfalzweyer",67320,NA,NA,67373,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",2.23,323,145
+"341","Pfulgriesheim",67370,NA,NA,67375,"Saverne","Bouxwiller","CC du Kochersberg",4.81,1292,269
+"342","Plaine",67420,NA,NA,67377,"Molsheim","Mutzig","CC de la Vallée de la Bruche",22.84,989,43
+"343","Plobsheim",67115,NA,NA,67378,"Strasbourg","Illkirch-Graffenstaden","Eurométropole de Strasbourg",16.64,4434,266
+"344","Preuschdorf",67250,NA,NA,67379,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",7.57,912,120
+"345","Printzheim",67490,NA,NA,67380,"Saverne","Saverne","CC du Pays de Saverne",4.3,201,47
+"346","Puberg",67290,NA,NA,67381,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",4.91,352,72
+"347","Quatzenheim",67117,NA,NA,67382,"Saverne","Bouxwiller","CC du Kochersberg",3.07,781,254
+"348","Rangen",67310,NA,NA,67383,"Molsheim","Saverne","CC de la Mossig et du Vignoble",1.65,206,125
+"349","Ranrupt",67420,NA,NA,67384,"Molsheim","Mutzig","CC de la Vallée de la Bruche",14.68,341,23
+"350","Ratzwiller",67430,NA,NA,67385,"Saverne","Ingwiller","CC de l'Alsace Bossue",8.72,253,29
+"351","Rauwiller",67320,NA,NA,67386,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.89,208,43
+"352","Reichsfeld",67140,NA,NA,67387,"Sélestat-Erstein","Obernai","CC du Pays de Barr",4.95,297,60
+"353","Reichshoffen",67110,NA,NA,67388,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",17.64,5393,306
+"354","Reichstett",67116,NA,NA,67389,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",7.61,4430,582
+"355","Reinhardsmunster",67440,NA,NA,67391,"Saverne","Saverne","CC du Pays de Saverne",18.63,452,24
+"356","Reipertswiller",67340,NA,NA,67392,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",19.21,873,45
+"357","Retschwiller",67250,NA,NA,67394,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",3.26,281,86
+"358","Reutenbourg",67440,NA,NA,67395,"Saverne","Saverne","CC du Pays de Saverne",4.4,432,98
+"359","Rexingen",67320,NA,NA,67396,"Saverne","Ingwiller","CC de l'Alsace Bossue",2.32,204,88
+"360","Rhinau",67860,NA,NA,67397,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",17.35,2717,157
+"361","Richtolsheim",67390,NA,NA,67398,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",3.63,335,92
+"362","Riedseltz",67160,NA,NA,67400,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",10.02,1095,109
+"363","Rimsdorf",67260,NA,NA,67401,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.07,311,51
+"364","Ringendorf",67350,NA,NA,67403,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",3.66,440,120
+"365","Rittershoffen",67690,NA,NA,67404,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",12.13,913,75
+"366","Rœschwoog",67480,NA,NA,67405,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",9.75,2296,235
+"367","Rohr",67270,NA,NA,67406,"Saverne","Bouxwiller","CC du Kochersberg",3.34,291,87
+"368","Rohrwiller",67410,NA,NA,67407,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",2.95,1662,563
+"369","Romanswiller",67310,NA,NA,67408,"Molsheim","Saverne","CC de la Mossig et du Vignoble",11.42,1258,110
+"370","Roppenheim",67480,NA,NA,67409,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",6.88,980,142
+"371","Rosenwiller",67560,NA,NA,67410,"Molsheim","Molsheim","CC des Portes de Rosheim",5.5,698,127
+"372","Rosheim",67560,NA,NA,67411,"Molsheim","Molsheim","CC des Portes de Rosheim",29.55,5083,172
+"373","Rossfeld",67230,NA,NA,67412,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",6.15,991,161
+"374","Rosteig",67290,NA,NA,67413,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",7.69,545,71
+"375","Rothau",67570,NA,NA,67414,"Molsheim","Mutzig","CC de la Vallée de la Bruche",3.88,1575,406
+"376","Rothbach",67340,NA,NA,67415,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",7.99,472,59
+"377","Rott",67160,NA,NA,67416,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",3.24,473,146
+"378","Rottelsheim",67170,NA,NA,67417,"Haguenau-Wissembourg","Brumath","CA de Haguenau",2.39,313,131
+"379","Rountzenheim-Auenheim",67480,NA,NA,67418,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",10.91,1945,178
+"380","Russ",67130,NA,NA,67420,"Molsheim","Mutzig","CC de la Vallée de la Bruche",11.55,1263,109
+"381","Saales",67420,NA,NA,67421,"Molsheim","Mutzig","CC de la Vallée de la Bruche",9.88,829,84
+"382","Saasenheim",67390,NA,NA,67422,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",7.8,603,77
+"383","Saessolsheim",67270,NA,NA,67423,"Saverne","Saverne","CC du Pays de Saverne",6.49,563,87
+"384","Saint-Blaise-la-Roche",67420,NA,NA,67424,"Molsheim","Mutzig","CC de la Vallée de la Bruche",2.39,233,97
+"385","Saint-Jean-Saverne",67700,NA,NA,67425,"Saverne","Saverne","CC du Pays de Saverne",6.39,574,90
+"386","Saint-Martin",67220,NA,NA,67426,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",3.97,352,89
+"387","Saint-Maurice",67220,NA,NA,67427,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",1.4,388,277
+"388","Saint-Nabor",67530,NA,NA,67428,"Molsheim","Molsheim","CC des Portes de Rosheim",1.89,488,258
+"389","Saint-Pierre",67140,NA,NA,67429,"Sélestat-Erstein","Obernai","CC du Pays de Barr",3.21,648,202
+"390","Saint-Pierre-Bois",67220,NA,NA,67430,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",7.3,773,106
+"391","Salmbach",67160,NA,NA,67432,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",8.91,580,65
+"392","Sand",67230,NA,NA,67433,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",6.35,1236,195
+"393","Sarre-Union",67260,NA,NA,67434,"Saverne","Ingwiller","CC de l'Alsace Bossue",15.39,2865,186
+"394","Sarrewerden",67260,NA,NA,67435,"Saverne","Ingwiller","CC de l'Alsace Bossue",16.73,857,51
+"395","Saulxures",67420,NA,NA,67436,"Molsheim","Mutzig","CC de la Vallée de la Bruche",12.84,516,40
+"396","Saverne",67700,NA,NA,67437,"Saverne","Saverne","CC du Pays de Saverne",26.01,11151,429
+"397","Schaeffersheim",67150,NA,NA,67438,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",3.96,846,214
+"398","Schaffhouse-près-Seltz",67470,NA,NA,67440,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",4.49,561,125
+"399","Schalkendorf",67350,NA,NA,67441,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",5.21,331,64
+"400","Scharrachbergheim-Irmstett",67310,NA,NA,67442,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",3.22,1203,374
+"401","Scheibenhard",67630,NA,NA,67443,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",4.62,817,177
+"402","Scherlenheim",67270,NA,NA,67444,"Saverne","Bouxwiller","CC du Pays de la Zorn",2.32,128,55
+"403","Scherwiller",67750,NA,NA,67445,"Sélestat-Erstein","Sélestat","CC de Sélestat",18.08,3171,175
+"404","Schillersdorf",67340,NA,NA,67446,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",7.53,435,58
+"405","Schiltigheim",67300,NA,NA,67447,"Strasbourg","Schiltigheim","Eurométropole de Strasbourg",7.63,31811,4169
+"406","Schirmeck",67130,NA,NA,67448,"Molsheim","Mutzig","CC de la Vallée de la Bruche",11.42,2242,196
+"407","Schirrhein",67240,NA,NA,67449,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",6.49,2212,341
+"408","Schirrhoffen",67240,NA,NA,67450,"Haguenau-Wissembourg","Bischwiller","CA de Haguenau",0.63,700,1111
+"409","Schleithal",67160,NA,NA,67451,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",9.12,1446,159
+"410","Schnersheim",67370,NA,NA,67452,"Saverne","Bouxwiller","CC du Kochersberg",10.82,1553,144
+"411","Schœnau",67390,NA,NA,67453,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",10.37,597,58
+"412","Schœnbourg",67320,NA,NA,67454,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",5.06,433,86
+"413","Schœnenbourg",67250,NA,NA,67455,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",5.47,688,126
+"414","Schopperten",67260,NA,NA,67456,"Saverne","Ingwiller","CC de l'Alsace Bossue",4.19,436,104
+"415","Schweighouse-sur-Moder",67590,NA,NA,67458,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",9.91,4915,496
+"416","Schwenheim",67440,NA,NA,67459,"Saverne","Saverne","CC du Pays de Saverne",4.96,767,155
+"417","Schwindratzheim",67270,NA,NA,67460,"Saverne","Bouxwiller","CC du Pays de la Zorn",9.14,1647,180
+"418","Schwobsheim",67390,NA,NA,67461,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",2.58,325,126
+"419","Seebach",67160,NA,NA,67351,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",17.11,1675,98
+"420","Sélestat",67600,NA,NA,67462,"Sélestat-Erstein","Sélestat","CC de Sélestat",44.4,19124,431
+"421","Seltz",67470,NA,NA,67463,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",21,3308,158
+"422","Sermersheim",67230,NA,NA,67464,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",10.12,921,91
+"423","Sessenheim",67770,NA,NA,67465,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",9.18,2304,251
+"424","Siegen",67160,NA,NA,67466,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",8.1,508,63
+"425","Siewiller",67320,NA,NA,67467,"Saverne","Ingwiller","CC de l'Alsace Bossue",6.2,389,63
+"426","Siltzheim",67260,NA,NA,67468,"Saverne","Ingwiller","CA Sarreguemines Confluences",6.96,647,93
+"427","Solbach",67130,NA,NA,67470,"Molsheim","Mutzig","CC de la Vallée de la Bruche",2.79,105,38
+"428","Sommerau",67310,67440,NA,67004,"Saverne","Saverne","CC du Pays de Saverne",15.96,1515,95
+"429","Souffelweyersheim",67460,NA,NA,67471,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",4.51,7860,1743
+"430","Soufflenheim",67620,NA,NA,67472,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",13.24,4910,371
+"431","Soultz-les-Bains",67120,NA,NA,67473,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",3.55,940,265
+"432","Soultz-sous-Forêts",67250,NA,NA,67474,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",15.15,3173,209
+"433","Sparsbach",67340,NA,NA,67475,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",13.58,244,18
+"434","Stattmatten",67770,NA,NA,67476,"Haguenau-Wissembourg","Bischwiller","CC du Pays Rhénan",3.93,691,176
+"435","Steige",67220,NA,NA,67477,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",9.86,597,61
+"436","Steinbourg",67790,NA,NA,67478,"Saverne","Saverne","CC du Pays de Saverne",12.73,2016,158
+"437","Steinseltz",67160,NA,NA,67479,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",5.47,602,110
+"438","Still",67190,NA,NA,67480,"Molsheim","Mutzig","CC de la région de Molsheim-Mutzig",23.2,1804,78
+"439","Stotzheim",67140,NA,NA,67481,"Sélestat-Erstein","Obernai","CC du Pays de Barr",13.61,1031,76
+"440","Struth",67290,NA,NA,67483,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",4.12,247,60
+"441","Stundwiller",67250,NA,NA,67484,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",3.32,484,146
+"442","Stutzheim-Offenheim",67370,NA,NA,67485,"Saverne","Bouxwiller","CC du Kochersberg",7.14,1377,193
+"443","Sundhouse",67920,NA,NA,67486,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",15.69,1819,116
+"444","Surbourg",67250,NA,NA,67487,"Haguenau-Wissembourg","Wissembourg","CC de l'Outre-Forêt",10.46,1679,161
+"445","Thal-Drulingen",67320,NA,NA,67488,"Saverne","Drulingen","CC de l'Alsace Bossue",5.25,183,35
+"446","Thal-Marmoutier",67440,NA,NA,67489,"Saverne","Saverne","CC du Pays de Saverne",3.42,781,228
+"447","Thanvillé",67220,NA,NA,67490,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",1.91,603,316
+"448","Tieffenbach",67290,NA,NA,67491,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",5.03,267,53
+"449","Traenheim",67310,NA,NA,67492,"Molsheim","Saverne","CC de la Mossig et du Vignoble",3.1,648,209
+"450","Triembach-au-Val",67220,NA,NA,67493,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",2.74,474,173
+"451","Trimbach",67470,NA,NA,67494,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",3.94,569,144
+"452","Truchtersheim",67370,NA,NA,67495,"Saverne","Bouxwiller","CC du Kochersberg",14.8,4022,272
+"453","Uhlwiller",67350,NA,NA,67497,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",7.46,697,93
+"454","Uhrwiller",67350,NA,NA,67498,"Haguenau-Wissembourg","Reichshoffen","CA de Haguenau",11.02,706,64
+"455","Urbeis",67220,NA,NA,67499,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",11.6,324,28
+"456","Urmatt",67280,NA,NA,67500,"Molsheim","Mutzig","CC de la Vallée de la Bruche",13.83,1487,108
+"457","Uttenheim",67150,NA,NA,67501,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",4.77,554,116
+"458","Uttenhoffen",67110,NA,NA,67502,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",1.95,201,103
+"459","Uttwiller",67330,NA,NA,67503,"Saverne","Bouxwiller","CC de Hanau-La Petite Pierre",2.99,161,54
+"460","Val de Moder",NA,NA,NA,NA,"","","",NA,NA,NA
+"461","Valff",67210,NA,NA,67504,"Sélestat-Erstein","Obernai","CC du Pays de Barr",10.91,1297,119
+"462","La Vancelle",67730,NA,NA,67505,"Sélestat-Erstein","Sélestat","CC de Sélestat",7.88,403,51
+"463","Vendenheim",67550,NA,NA,67506,"Strasbourg","Brumath","Eurométropole de Strasbourg",15.89,5528,348
+"464","Villé",67220,NA,NA,67507,"Sélestat-Erstein","Mutzig","CC de la Vallée de Villé",2.84,1850,651
+"465","Vœllerdingen",67430,NA,NA,67508,"Saverne","Ingwiller","CC de l'Alsace Bossue",13.05,396,30
+"466","Volksberg",67290,NA,NA,67509,"Saverne","Ingwiller","CC de l'Alsace Bossue",9.45,355,38
+"467","Wahlenheim",67170,NA,NA,67510,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",2.55,428,168
+"468","Walbourg",67360,NA,NA,67511,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",5.33,912,171
+"469","Waldersbach",67130,NA,NA,67513,"Molsheim","Mutzig","CC de la Vallée de la Bruche",3.37,130,39
+"470","Waldhambach",67430,NA,NA,67514,"Saverne","Ingwiller","CC de l'Alsace Bossue",12.59,619,49
+"471","Waldolwisheim",67700,NA,NA,67515,"Saverne","Saverne","CC du Pays de Saverne",5.65,576,102
+"472","Waltenheim-sur-Zorn",67670,NA,NA,67516,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.04,658,131
+"473","Wangen",67520,NA,NA,67517,"Molsheim","Molsheim","CC de la Mossig et du Vignoble",3.87,712,184
+"474","Wangenbourg-Engenthal",67710,NA,NA,67122,"Molsheim","Saverne","CC de la Mossig et du Vignoble",31.52,1368,43
+"475","La Wantzenau",67610,NA,NA,67519,"Strasbourg","Brumath","Eurométropole de Strasbourg",25.39,5804,229
+"476","Wasselonne",67310,NA,NA,67520,"Molsheim","Saverne","CC de la Mossig et du Vignoble",15,5640,376
+"477","Weinbourg",67340,NA,NA,67521,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",5.29,434,82
+"478","Weislingen",67290,NA,NA,67522,"Saverne","Ingwiller","CC de l'Alsace Bossue",7.01,529,75
+"479","Weitbruch",67500,NA,NA,67523,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",15.11,2863,189
+"480","Weiterswiller",67340,NA,NA,67524,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",7.91,524,66
+"481","Westhoffen",67310,NA,NA,67525,"Molsheim","Saverne","CC de la Mossig et du Vignoble",20.65,1659,80
+"482","Westhouse",67230,NA,NA,67526,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",11.94,1526,128
+"483","Westhouse-Marmoutier",67440,NA,NA,67527,"Saverne","Saverne","CC du Pays de Saverne",3.96,271,68
+"484","Weyer",67320,NA,NA,67528,"Saverne","Ingwiller","CC de l'Alsace Bossue",11.58,582,50
+"485","Weyersheim",67720,NA,NA,67529,"Haguenau-Wissembourg","Brumath","CC de la Basse-Zorn",18.89,3335,177
+"486","Wickersheim-Wilshausen",67270,NA,NA,67530,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.45,399,73
+"487","Wildersbach",67130,NA,NA,67531,"Molsheim","Mutzig","CC de la Vallée de la Bruche",3.3,294,89
+"488","Willgottheim",67370,NA,NA,67532,"Saverne","Bouxwiller","CC du Kochersberg",9,1088,121
+"489","Wilwisheim",67270,NA,NA,67534,"Saverne","Bouxwiller","CC du Pays de la Zorn",5.3,727,137
+"490","Wimmenau",67290,NA,NA,67535,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",20.76,1103,53
+"491","Windstein",67110,NA,NA,67536,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",11.97,164,14
+"492","Wingen",67510,NA,NA,67537,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",16.79,457,27
+"493","Wingen-sur-Moder",67290,NA,NA,67538,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",17.37,1629,94
+"494","Wingersheim les Quatre Bans",67170,67270,NA,67539,"Saverne","Bouxwiller","CC du Pays de la Zorn",18.5,2272,123
+"495","Wintershouse",67590,NA,NA,67540,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",3.66,907,248
+"496","Wintzenbach",67470,NA,NA,67541,"Haguenau-Wissembourg","Wissembourg","CC de la Plaine du Rhin",6.96,550,79
+"497","Wintzenheim-Kochersberg",67370,NA,NA,67542,"Saverne","Bouxwiller","CC du Kochersberg",1.95,396,203
+"498","Wisches",67130,NA,NA,67543,"Molsheim","Mutzig","CC de la Vallée de la Bruche",19.25,2111,110
+"499","Wissembourg",67160,NA,NA,67544,"Haguenau-Wissembourg","Wissembourg","CC du Pays de Wissembourg‎",48.18,7600,158
+"500","Witternheim",67230,NA,NA,67545,"Sélestat-Erstein","Erstein","CC du Canton d'Erstein",4.99,514,103
+"501","Wittersheim",67670,NA,NA,67546,"Haguenau-Wissembourg","Haguenau","CA de Haguenau",7.05,644,91
+"502","Wittisheim",67820,NA,NA,67547,"Sélestat-Erstein","Sélestat","CC de Marckolsheim et environs",11.47,2055,179
+"503","Wiwersheim",67370,NA,NA,67548,"Saverne","Bouxwiller","CC du Kochersberg",3.29,873,265
+"504","Wœrth",67360,NA,NA,67550,"Haguenau-Wissembourg","Reichshoffen","CC Sauer-Pechelbronn",6.47,1743,269
+"505","Wolfisheim",67202,NA,NA,67551,"Strasbourg","Hœnheim","Eurométropole de Strasbourg",5.57,4139,743
+"506","Wolfskirchen",67260,NA,NA,67552,"Saverne","Ingwiller","CC de l'Alsace Bossue",10.48,349,33
+"507","Wolschheim",67700,NA,NA,67553,"Saverne","Saverne","CC du Pays de Saverne",3.65,318,87
+"508","Wolxheim",67120,NA,NA,67554,"Molsheim","Molsheim","CC de la région de Molsheim-Mutzig",2.92,954,327
+"509","Zehnacker",67310,NA,NA,67555,"Molsheim","Saverne","CC de la Mossig et du Vignoble",2.18,245,112
+"510","Zeinheim",67310,NA,NA,67556,"Molsheim","Saverne","CC de la Mossig et du Vignoble",2.46,201,82
+"511","Zellwiller",67140,NA,NA,67557,"Sélestat-Erstein","Obernai","CC du Pays de Barr",8.79,772,88
+"512","Zinswiller",67110,NA,NA,67558,"Haguenau-Wissembourg","Reichshoffen","CC du Pays de Niederbronn-les-Bains",7.14,772,108
+"513","Zittersheim",67290,NA,NA,67559,"Saverne","Ingwiller","CC de Hanau-La Petite Pierre",7.92,245,31

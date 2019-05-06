@@ -31,6 +31,10 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/assets/images/Rplot01.pdf</loc>
+<lastmod>2019-05-06T20:04:24+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/assets/leaflet/leaflet_cinemas.html</loc>
 <lastmod>2019-05-01T20:13:28+02:00</lastmod>
 </url>
