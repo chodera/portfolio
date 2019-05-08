@@ -4,7 +4,7 @@ title: "Public toilets in Strasbourg"
 output:
   html_document:
     df_print: paged
-image: assets/images/toilet.jpg
+image: assets/images/toilet_opt.jpg
 normal: true
 show: true
 logo: r

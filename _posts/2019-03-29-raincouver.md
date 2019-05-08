@@ -4,7 +4,7 @@ title: "Raincouver"
 output:
   html_document:
     df_print: paged
-image: assets/images/rain.jpg
+image: assets/images/rain_opt.jpg
 normal: true
 show: true
 logo: python
