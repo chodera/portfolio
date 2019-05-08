@@ -756,3 +756,9 @@ a.black {
     bottom: 0;
     right: 0;
 }
+
+.child-div {
+    position:absolute;
+    left:0;
+    right:0;
+}

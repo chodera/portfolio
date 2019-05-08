@@ -5,8 +5,8 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 May 2019 11:56:06 +0200</pubDate>
-    <lastBuildDate>Wed, 08 May 2019 11:56:06 +0200</lastBuildDate>
+    <pubDate>Wed, 08 May 2019 15:13:36 +0200</pubDate>
+    <lastBuildDate>Wed, 08 May 2019 15:13:36 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -134,13 +134,13 @@
 
 &lt;p&gt;After preparing the data, we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/number_of_cinemas.png&quot; alt=&quot;number_of_cinemas&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;../assets/images/number_of_cinemas.png&quot; alt=&quot;number_of_cinemas&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level.&lt;/p&gt;
 
 &lt;p&gt;The following graphs visualize different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate.&lt;/p&gt;
 
-&lt;p&gt;&lt;iframe style=&quot;width:130%;&quot; height=&quot;800&quot; src=&quot;https://chodera.shinyapps.io/cinemas-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;iframe style=&quot;width:80%;&quot; height=&quot;500&quot; src=&quot;https://chodera.shinyapps.io/cinemas-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;p&gt;Get the full code &lt;a href=&quot;http://localhost:4000/assets/projects/6. Cinemas in Strasbourg/cinemas_stras_20190506.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>

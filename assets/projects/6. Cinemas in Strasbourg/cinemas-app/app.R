@@ -34,26 +34,33 @@ ui <- fluidPage(
          }')
   )),
   
-  sidebarLayout(
+  mainPanel(
+      fluidRow(
+        
+        column(12, align="left",
+               selectInput("var", 
+                           label = p("Choose the indicator to be visualized:"),
+                           choices = c("Number of seats", 
+                                       "Number of screens",
+                                       "Number of movies shown",
+                                       "Number of entries",
+                                       "Revenue",
+                                       "Frequentation index",
+                                       "Occupancy rate"),
+                           selected = "Number of seats")
+        )
+        
 
-    mainPanel(
-
+      ),
       
-      plotOutput("plot", width = "100%")),
-      
-      selectInput("var", 
-                label = p("Choose the indicator to be visualized:"),
-                choices = c("Number of seats", 
-                            "Number of screens",
-                            "Number of movies shown",
-                            "Number of entries",
-                            "Revenue",
-                            "Frequentation index",
-                            "Occupancy rate"),
-                selected = "Number of seats")
-     
-  )
-    )
+      fluidRow(
+        
+        column(12, align="center",
+           plotOutput("plot", width = "120%")
+        )
+      )
+  ))
+  
 
 # Server logic ----
 server <- function(input, output) {
