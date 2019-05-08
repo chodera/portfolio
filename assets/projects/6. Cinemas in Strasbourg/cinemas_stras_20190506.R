@@ -128,12 +128,15 @@ cinemas_stras <- left_join(clean_data$number_of_cinemas, clean_data$screens, by 
 # Remove separate data frames
 rm(list = c(sheet_names, "clean_data", "data"))
 
+# Save data
+write_csv(cinemas_stras, "cinemas_stras.csv")
+
 # Plot data
 ## Number of cinemas
 ggplot(data = cinemas_stras) +
   aes(x = year, y = number_of_cinemas, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(breaks = c(0:9)) +
   expand_limits(y = 1) +
   labs(x = "Year",
@@ -150,7 +153,7 @@ ggplot(data = cinemas_stras) +
 seats <- ggplot(data = cinemas_stras) +
   aes(x = year, y = seats, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(1, 10000)) +
   expand_limits(y = 1) +
   labs(x = "Year",
@@ -163,13 +166,13 @@ seats <- ggplot(data = cinemas_stras) +
         panel.grid.major.x = element_line(colour = "lightgray"),
         panel.grid.major.y = element_line(colour = "lightgray"),
         axis.text.x = element_text(colour = "black", angle = 45, hjust = 1),
-        axis.text.y = element_text(colour="black"))
+        axis.text.y = element_text(colour="black")) 
 
 ## Number of screens
 screens <- ggplot(data = cinemas_stras) +
   aes(x = year, y = screens, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(1, 50)) +
   expand_limits(y = 1) +
   labs(x = "Year",
@@ -188,7 +191,7 @@ screens <- ggplot(data = cinemas_stras) +
 movies <- ggplot(data = cinemas_stras) +
   aes(x = year, y = showing, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(1, 100000)) +
   expand_limits(y = 1) +
   labs(x = "Year",
@@ -207,7 +210,7 @@ movies <- ggplot(data = cinemas_stras) +
 entries <- ggplot(data = cinemas_stras) +
   aes(x = year, y = entries, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(1, 3000000)) +
   expand_limits(y = 1) +
   labs(x = "Year",
@@ -226,7 +229,7 @@ entries <- ggplot(data = cinemas_stras) +
 revenue <- ggplot(data = cinemas_stras) +
   aes(x = year, y = revenue, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(0, 15000000)) +
   #expand_limits(y = 1) +
   labs(x = "Year",
@@ -245,7 +248,7 @@ revenue <- ggplot(data = cinemas_stras) +
 freq <- ggplot(data = cinemas_stras) +
   aes(x = year, y = frequentation_index, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(0, 10)) +
   #expand_limits(y = 1) +
   labs(x = "Year",
@@ -261,10 +264,10 @@ freq <- ggplot(data = cinemas_stras) +
         axis.text.y = element_text(colour="black"))
 
 ## Occupancy rate
-occ <- installggplot(data = cinemas_stras) +
+occ <- ggplot(data = cinemas_stras) +
   aes(x = year, y = occupancy_rate, group = 1) +
   geom_line() +
-  scale_x_continuous(breaks = c(1992:2017), limits = c(1992, 2017)) +
+  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
   scale_y_continuous(limits = c(0, 22)) +
   #expand_limits(y = 1) +
   labs(x = "Year",
@@ -280,4 +283,7 @@ occ <- installggplot(data = cinemas_stras) +
         axis.text.y = element_text(colour="black"))
 
 # Plot graphs
-grid.arrange(seats, screens, movies, entries, revenue, freq, ncol = 2)
+grid.arrange(seats, screens, movies, entries, revenue, freq, occ, ncol = 2)
+
+# Save plots
+save(seats, screens, movies, entries, revenue, freq, occ, file = "cinemas_plots.RData")

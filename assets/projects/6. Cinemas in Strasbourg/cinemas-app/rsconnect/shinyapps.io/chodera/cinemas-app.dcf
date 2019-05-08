@@ -1,0 +1,12 @@
+name: cinemas-app
+title: cinemas-app
+username:
+account: chodera
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 917352
+bundleId: 2069074
+url: https://chodera.shinyapps.io/cinemas-app/
+when: 1557308504.50367
+asMultiple: FALSE
+asStatic: FALSE
