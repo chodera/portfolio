@@ -161,7 +161,7 @@
 			<div class="article-post">
 				<p>Names of places in Alsace are sometimes described as unpronounceable for French people. Most names have a Germanic root and sound pretty exotic for French speakers. I recommend taking a regional train and listening to the voice announcing the Alsatian stations with a very French pronunciation, quite a funny experience. A recent trip on the train made me think about the similarity of suffixes in Alsatian place names and I was interested to know how many places actually end on “-heim”, “-willer” and so on.</p>
 
-<p>This post uses data from a scraped Wikipedia table from <a href="/webscraping_wikipedia/">another post</a>. It contains information on communes in the département Bas-Rhin. Here, we are only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.</p>
+<p>This post uses data from a scraped Wikipedia table from <a href="/webscraping_wikipedia/">another post</a>. It contains information on communes in the département Bas-Rhin. Here, we only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Load packages</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span><span class="w">
@@ -175,16 +175,16 @@
   </span><span class="n">filter</span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s2">"Bas-Rhin"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">pull</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span></code></pre></figure>
 
-<p>First thing to clean up is possible extensions of the place names, such as river names (e.g. like sur-Zorn or les-Bains).</p>
+<p>First thing to clean up is possible extensions of the place names, such as river names (e.g. -sur-Zorn or -les-Bains).</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">bas_rhin_noms</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">str_split</span><span class="p">(</span><span class="n">bas_rhin_noms</span><span class="p">,</span><span class="w"> </span><span class="s2">"-"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">map_chr</span><span class="p">(</span><span class="n">tail</span><span class="p">(</span><span class="m">1</span><span class="p">))</span></code></pre></figure>
 
 <p>As we are interested in the suffixes of the place names, we need a method to split the strings
-into syllables. Here, we will use the method hyphen() from the sylly package that
+into syllables. We will use the method hyphen() from the <a href="https://github.com/unDocUMeantIt/sylly" target="_blank">sylly</a> package that
 takes vectors of character strings and applies an hyphenation algorithm to each word
-(This algorithm was originally developed for automatic word hyphenation in LaTeX).
-The algorithm need a set of hyphenation patterns which are provided in dictionaries
+(the algorithm was originally developed for automatic word hyphenation in LaTeX).
+The algorithm needs a set of hyphenation patterns which are provided in dictionaries
 for different languages. Let’s try out the French (Alsace is in France!) and German
 (Alsatian is a German dialect) dictionaries for the place names.</p>
 
@@ -225,11 +225,11 @@ for different languages. Let’s try out the French (Alsace is in France!) and G
 1 FALSE                258
 2 TRUE                 255</code></pre></figure>
 
-<p>There are 254 names split in the same way, 259 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
+<p>There are 255 names split in the same way, 258 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
 because it splits syllables better than the French one for the names under study
-(e.g. -sheim vs. -heim, e.g. -swiller vs. -wil-ler).</p>
+(e.g. -heim vs. -sheim, e.g. -wil-ler vs. -swiller).</p>
 
-<p>However, there are still some manual corrections necessary, for example uniting some syllables (like -wil and -ler) to get the correct suffixes.</p>
+<p>However, there are still some manual corrections necessary, for example reuniting some syllables (like -wil and -ler) to get the correct suffixes.</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">syllables_de</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">syllables_de</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">
   </span><span class="n">mutate</span><span class="p">(</span><span class="n">german</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str_replace_all</span><span class="p">(</span><span class="n">german</span><span class="p">,</span><span class="w">
@@ -299,9 +299,9 @@ because it splits syllables better than the French one for the names under study
   </span><span class="n">ylab</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">
   </span><span class="n">labs</span><span class="p">(</span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Only suffixes with more than 5 occurrences are displayed."</span><span class="p">)</span></code></pre></figure>
 
-<p><img src="../assets/images/suffixes.png" alt="suffixes" /></p>
+<p style="text-align: center;"><img src="../assets/images/suffixes.png" alt="suffixes" /></p>
 
-<p>This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future.</p>
+<p>This analysis was limited to places in the département Bas-Rhin, but I might extend it to the second Alsatian département Haut-Rhin in the near future.</p>
 
 <p>Get the code <a href="https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R" target="_blank">here</a>.</p>
 

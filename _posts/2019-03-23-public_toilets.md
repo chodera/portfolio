@@ -10,7 +10,7 @@ show: true
 logo: r
 ---
 
-Ever wandered around a city desperately looking for a public toilet? Fear not, the open data movement is here to help. The city of Strasbourg recently opened a new open data portal and while checking their available data sets I came across the one about public toilets. I guess every city should leak information about their public toilets.
+Ever wandered around a city desperately looking for a public toilet? Fear not, the open data movement is here to help. The city of Strasbourg recently opened a new [open data portal](https://data.strasbourg.eu/pages/accueil/){:target="_blank"} and while checking their available data sets I came across the one about public toilets. I guess every city should leak information about their public toilets.
 
 I accessed the data by using an API and made a little map showing where to find the toilets.
 

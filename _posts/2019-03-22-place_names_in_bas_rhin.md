@@ -12,7 +12,7 @@ logo: r
 
 Names of places in Alsace are sometimes described as unpronounceable for French people. Most names have a Germanic root and sound pretty exotic for French speakers. I recommend taking a regional train and listening to the voice announcing the Alsatian stations with a very French pronunciation, quite a funny experience. A recent trip on the train made me think about the similarity of suffixes in Alsatian place names and I was interested to know how many places actually end on "-heim", "-willer" and so on.
 
-This post uses data from a scraped Wikipedia table from [another post]({% post_url 2019-03-21-webscraping_wikipedia %}). It contains information on communes in the département Bas-Rhin. Here, we are only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.
+This post uses data from a scraped Wikipedia table from [another post]({% post_url 2019-03-21-webscraping_wikipedia %}). It contains information on communes in the département Bas-Rhin. Here, we only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.
 
 {% highlight r %}
 # Load packages
@@ -28,7 +28,7 @@ bas_rhin_noms <- bas_rhin %>%
   pull(nom)
 {% endhighlight %}
 
-First thing to clean up is possible extensions of the place names, such as river names (e.g. like sur-Zorn or les-Bains).
+First thing to clean up is possible extensions of the place names, such as river names (e.g. -sur-Zorn or -les-Bains).
 
 {% highlight r %}
 bas_rhin_noms <- str_split(bas_rhin_noms, "-") %>%
@@ -36,10 +36,10 @@ bas_rhin_noms <- str_split(bas_rhin_noms, "-") %>%
 {% endhighlight %}
 
 As we are interested in the suffixes of the place names, we need a method to split the strings
-into syllables. Here, we will use the method hyphen() from the sylly package that
+into syllables. We will use the method hyphen() from the [sylly](https://github.com/unDocUMeantIt/sylly){:target="_blank"} package that
 takes vectors of character strings and applies an hyphenation algorithm to each word
-(This algorithm was originally developed for automatic word hyphenation in LaTeX).
-The algorithm need a set of hyphenation patterns which are provided in dictionaries
+(the algorithm was originally developed for automatic word hyphenation in LaTeX).
+The algorithm needs a set of hyphenation patterns which are provided in dictionaries
 for different languages. Let's try out the French (Alsace is in France!) and German
 (Alsatian is a German dialect) dictionaries for the place names.
 
@@ -84,11 +84,11 @@ syllables %>%
 2 TRUE                 255
 {% endhighlight %}
 
-There are 254 names split in the same way, 259 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
+There are 255 names split in the same way, 258 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
 because it splits syllables better than the French one for the names under study
-(e.g. -sheim vs. -heim, e.g. -swiller vs. -wil-ler).
+(e.g. -heim vs. -sheim, e.g. -wil-ler vs. -swiller).
 
-However, there are still some manual corrections necessary, for example uniting some syllables (like -wil and -ler) to get the correct suffixes.
+However, there are still some manual corrections necessary, for example reuniting some syllables (like -wil and -ler) to get the correct suffixes.
 
 {% highlight r %}
 syllables_de <- syllables_de %>%
@@ -166,8 +166,10 @@ ggplot(data = filter(suffixes, n > 5)) +
   labs(caption = "Only suffixes with more than 5 occurrences are displayed.")
 {% endhighlight %}
 
+{:refdef: style="text-align: center;"}
 ![suffixes](../assets/images/suffixes.png)
+{:refdef}
 
-This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future.
+This analysis was limited to places in the département Bas-Rhin, but I might extend it to the second Alsatian département Haut-Rhin in the near future.
 
 Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R){:target="_blank"}.

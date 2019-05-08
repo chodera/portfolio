@@ -142,7 +142,7 @@ bas_rhin <- bas_rhin %>%
 
 {% endhighlight %}
 
-The clean data set can be downloaded [here]({{ site.url }}/assets/data/bas_rhin.csv).
+A glimpse on the clean data set (which can be downloaded [here]({{ site.url }}/assets/data/bas_rhin.csv)):
 
 {% highlight text %}
 ## # A tibble: 514 x 11

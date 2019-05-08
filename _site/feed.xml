@@ -5,8 +5,8 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 May 2019 16:50:51 +0200</pubDate>
-    <lastBuildDate>Wed, 08 May 2019 16:50:51 +0200</lastBuildDate>
+    <pubDate>Wed, 08 May 2019 22:14:22 +0200</pubDate>
+    <lastBuildDate>Wed, 08 May 2019 22:14:22 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -25,7 +25,7 @@
 
 &lt;iframe style=&quot;width:100%;&quot; height=&quot;400&quot; src=&quot;/assets/leaflet/leaflet_cinemas&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;But how did the cinema landscape evolve over the last years in Strasbourg? Appropriate data to answer this question comes from the Centre national du cinéma et de l’image animée (CNC) and is available on the French open data platform &lt;a href=&quot;https://www.data.gouv.fr/fr/datasets/r/1d1f7746-1229-454d-9597-6ec41cc0a9ca&quot;&gt;data.gouv.fr&lt;/a&gt; (or can be downloaded &lt;a href=&quot;http://localhost:4000/assets/data/Meilleures audiences en salles depuis 1945.xlsx&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;But how did the cinema landscape evolve over the last years in Strasbourg? Appropriate data to answer this question comes from the Centre national du cinéma et de l’image animée (CNC) and is available on the French open data platform &lt;a href=&quot;https://www.data.gouv.fr/fr/datasets/geographie-du-cinema-equipement-et-frequentation/#_&quot; target=&quot;_blank&quot;&gt;data.gouv.fr&lt;/a&gt; (or can be downloaded &lt;a href=&quot;http://localhost:4000/assets/data/Meilleures audiences en salles depuis 1945.xlsx&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;As usual, we start by loading the necessary packages.&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nominatim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;leaflet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Next, we define some helper function for cleaning and preparing the data in the original Excel sheet.&lt;/p&gt;
+&lt;p&gt;Next, we define some helper functions for cleaning and preparing the data in the original Excel file.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Define functions&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
@@ -132,13 +132,13 @@
 &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Remove separate data frames&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sheet_names&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;clean_data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;After preparing the data, we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.&lt;/p&gt;
+&lt;p&gt;After having prepared the data we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;../assets/images/number_of_cinemas.png&quot; alt=&quot;number_of_cinemas&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level. Did the reduction actually correspond to less people going to the movies?&lt;/p&gt;
+&lt;p&gt;A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2004, the number remained at this level. Did the reduction actually correspond to less people going to the movies?&lt;/p&gt;
 
-&lt;p&gt;The following graph visualizes different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate. A striking impact on the evolution of cinemas in Strasbourg was the opening of the first (and until today the only) multiplex cinema in 1999 (cf. the red vertical line). All at once, the number of seats nearly doubled. Consequently, there were more screens available and more movies shown from then on. However, the number of entries did not increase as much. Nevertheless, it reached its peak in 2011 with around 2.5 millions entries and is slightly decreasing since then. Revenues follow this overall trend.&lt;/p&gt;
+&lt;p&gt;The following graph visualizes different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate. A striking impact on the evolution of cinemas in Strasbourg had the opening of the first (and until today the only) multiplex cinema in 1999 (cf. the red vertical line). All at once, the number of seats nearly doubled. Consequently, there were more screens available and more movies shown from then on. However, the number of entries did not increase as much. Nevertheless, it reached its peak in 2011 with around 2.5 millions entries and is slightly decreasing since then. Revenues follow this overall trend.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;iframe style=&quot;width:80%;&quot; height=&quot;500&quot; src=&quot;https://chodera.shinyapps.io/cinemas-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
@@ -159,7 +159,7 @@
         <title>Raincouver</title>
         <description>&lt;p&gt;The following code stems from a project I prepared while studying in Vancouver. As it was very, very rainy, I decided to analyze some weather data, trying to answer if there was reason to be optimistic for the months to come.&lt;/p&gt;
 
-&lt;p&gt;The data is official &lt;a href=&quot;http://climate.weather.gc.ca&quot;&gt;governmental weather data&lt;/a&gt;, measured at the weather station at the international airport in the year 2016, and contains information about the weather in Vancouver in 2016 (date, temperature, rainfall, snowfall, direction of the wind, …). It can be downloaded here &lt;a href=&quot;http://localhost:4000/assets/data/daily_weather_2016.csv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The data is official &lt;a href=&quot;http://climate.weather.gc.ca&quot; target=&quot;_blank&quot;&gt;governmental weather data&lt;/a&gt;, measured at the weather station at the international airport in the year 2016, and contains information about the weather in Vancouver in 2016 (date, temperature, rainfall, snowfall, direction of the wind, …). It can be downloaded here &lt;a href=&quot;http://localhost:4000/assets/data/daily_weather_2016.csv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The idea was to plot monthly rainfall. From the information available, all that I needed to solve the problem was the rainfall (mm) and the month.&lt;/p&gt;
 
@@ -733,7 +733,7 @@
     
       <item>
         <title>Public toilets in Strasbourg</title>
-        <description>&lt;p&gt;Ever wandered around a city desperately looking for a public toilet? Fear not, the open data movement is here to help. The city of Strasbourg recently opened a new open data portal and while checking their available data sets I came across the one about public toilets. I guess every city should leak information about their public toilets.&lt;/p&gt;
+        <description>&lt;p&gt;Ever wandered around a city desperately looking for a public toilet? Fear not, the open data movement is here to help. The city of Strasbourg recently opened a new &lt;a href=&quot;https://data.strasbourg.eu/pages/accueil/&quot; target=&quot;_blank&quot;&gt;open data portal&lt;/a&gt; and while checking their available data sets I came across the one about public toilets. I guess every city should leak information about their public toilets.&lt;/p&gt;
 
 &lt;p&gt;I accessed the data by using an API and made a little map showing where to find the toilets.&lt;/p&gt;
 
@@ -835,7 +835,7 @@
         <title>Place names in Alsace</title>
         <description>&lt;p&gt;Names of places in Alsace are sometimes described as unpronounceable for French people. Most names have a Germanic root and sound pretty exotic for French speakers. I recommend taking a regional train and listening to the voice announcing the Alsatian stations with a very French pronunciation, quite a funny experience. A recent trip on the train made me think about the similarity of suffixes in Alsatian place names and I was interested to know how many places actually end on “-heim”, “-willer” and so on.&lt;/p&gt;
 
-&lt;p&gt;This post uses data from a scraped Wikipedia table from &lt;a href=&quot;/webscraping_wikipedia/&quot;&gt;another post&lt;/a&gt;. It contains information on communes in the département Bas-Rhin. Here, we are only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.&lt;/p&gt;
+&lt;p&gt;This post uses data from a scraped Wikipedia table from &lt;a href=&quot;/webscraping_wikipedia/&quot;&gt;another post&lt;/a&gt;. It contains information on communes in the département Bas-Rhin. Here, we only need the names of the places. We start by loading packages, data and pulling out the column we are interested in.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Load packages&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tidyverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -849,16 +849,16 @@
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nom&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bas-Rhin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pull&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;First thing to clean up is possible extensions of the place names, such as river names (e.g. like sur-Zorn or les-Bains).&lt;/p&gt;
+&lt;p&gt;First thing to clean up is possible extensions of the place names, such as river names (e.g. -sur-Zorn or -les-Bains).&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin_noms&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str_split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin_noms&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;map_chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;As we are interested in the suffixes of the place names, we need a method to split the strings
-into syllables. Here, we will use the method hyphen() from the sylly package that
+into syllables. We will use the method hyphen() from the &lt;a href=&quot;https://github.com/unDocUMeantIt/sylly&quot; target=&quot;_blank&quot;&gt;sylly&lt;/a&gt; package that
 takes vectors of character strings and applies an hyphenation algorithm to each word
-(This algorithm was originally developed for automatic word hyphenation in LaTeX).
-The algorithm need a set of hyphenation patterns which are provided in dictionaries
+(the algorithm was originally developed for automatic word hyphenation in LaTeX).
+The algorithm needs a set of hyphenation patterns which are provided in dictionaries
 for different languages. Let’s try out the French (Alsace is in France!) and German
 (Alsatian is a German dialect) dictionaries for the place names.&lt;/p&gt;
 
@@ -899,11 +899,11 @@ for different languages. Let’s try out the French (Alsace is in France!) and G
 1 FALSE                258
 2 TRUE                 255&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;There are 254 names split in the same way, 259 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
+&lt;p&gt;There are 255 names split in the same way, 258 differently. Indeed, the choice of the dictionary affects the outcomes. After manually inspecting the differences, I opt for the German dictionary
 because it splits syllables better than the French one for the names under study
-(e.g. -sheim vs. -heim, e.g. -swiller vs. -wil-ler).&lt;/p&gt;
+(e.g. -heim vs. -sheim, e.g. -wil-ler vs. -swiller).&lt;/p&gt;
 
-&lt;p&gt;However, there are still some manual corrections necessary, for example uniting some syllables (like -wil and -ler) to get the correct suffixes.&lt;/p&gt;
+&lt;p&gt;However, there are still some manual corrections necessary, for example reuniting some syllables (like -wil and -ler) to get the correct suffixes.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-r&quot; data-lang=&quot;r&quot;&gt;&lt;span class=&quot;n&quot;&gt;syllables_de&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;syllables_de&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mutate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;german&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str_replace_all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;german&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -973,9 +973,9 @@ because it splits syllables better than the French one for the names under study
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ylab&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;labs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caption&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Only suffixes with more than 5 occurrences are displayed.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/images/suffixes.png&quot; alt=&quot;suffixes&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;../assets/images/suffixes.png&quot; alt=&quot;suffixes&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future.&lt;/p&gt;
+&lt;p&gt;This analysis was limited to places in the département Bas-Rhin, but I might extend it to the second Alsatian département Haut-Rhin in the near future.&lt;/p&gt;
 
 &lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -1109,7 +1109,7 @@ because it splits syllables better than the French one for the names under study
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bas_rhin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;%&amp;gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nom&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Bas-Rhin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;The clean data set can be downloaded &lt;a href=&quot;http://localhost:4000/assets/data/bas_rhin.csv&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A glimpse on the clean data set (which can be downloaded &lt;a href=&quot;http://localhost:4000/assets/data/bas_rhin.csv&quot;&gt;here&lt;/a&gt;):&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;## # A tibble: 514 x 11
 ##    nom   code_postal_1 code_postal_2 code_postal_3 code_insee
@@ -1139,7 +1139,7 @@ because it splits syllables better than the French one for the names under study
     
       <item>
         <title>Demographics in Alsace</title>
-        <description>&lt;p&gt;A little Shiny app that visualizes data from INSEE (the national statistics bureau of France) on communities in Alsace. This app was implemented in order to play around with Shiny and test its functionalities. Note that there is some missing data for a few units due to boundary changes.&lt;/p&gt;
+        <description>&lt;p&gt;A little Shiny app that visualizes &lt;a href=&quot;https://www.insee.fr/fr/statistiques/2521169#consulter&quot; target=&quot;_blank&quot;&gt;data from INSEE&lt;/a&gt; (the national statistics bureau of France) on communities in Alsace. This app was implemented in order to play around with &lt;a href=&quot;https://shiny.rstudio.com/&quot; target=&quot;_blank&quot;&gt;Shiny&lt;/a&gt; and to test its functionalities. Note that there is some missing data for a few units due to boundary changes.&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe style=&quot;width:100%;&quot; height=&quot;800&quot; src=&quot;https://chodera.shinyapps.io/alsace-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
 </description>

@@ -173,7 +173,7 @@
 
 <iframe style="width:100%;" height="400" src="/assets/leaflet/leaflet_cinemas" frameborder="0" allowfullscreen=""></iframe>
 
-<p>But how did the cinema landscape evolve over the last years in Strasbourg? Appropriate data to answer this question comes from the Centre national du cinéma et de l’image animée (CNC) and is available on the French open data platform <a href="https://www.data.gouv.fr/fr/datasets/r/1d1f7746-1229-454d-9597-6ec41cc0a9ca">data.gouv.fr</a> (or can be downloaded <a href="http://localhost:4000/assets/data/Meilleures audiences en salles depuis 1945.xlsx">here</a>).</p>
+<p>But how did the cinema landscape evolve over the last years in Strasbourg? Appropriate data to answer this question comes from the Centre national du cinéma et de l’image animée (CNC) and is available on the French open data platform <a href="https://www.data.gouv.fr/fr/datasets/geographie-du-cinema-equipement-et-frequentation/#_" target="_blank">data.gouv.fr</a> (or can be downloaded <a href="http://localhost:4000/assets/data/Meilleures audiences en salles depuis 1945.xlsx">here</a>).</p>
 
 <p>As usual, we start by loading the necessary packages.</p>
 
@@ -183,7 +183,7 @@
 </span><span class="n">library</span><span class="p">(</span><span class="n">nominatim</span><span class="p">)</span><span class="w">
 </span><span class="n">library</span><span class="p">(</span><span class="n">leaflet</span><span class="p">)</span></code></pre></figure>
 
-<p>Next, we define some helper function for cleaning and preparing the data in the original Excel sheet.</p>
+<p>Next, we define some helper functions for cleaning and preparing the data in the original Excel file.</p>
 
 <figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="c1"># Define functions</span><span class="w">
 
@@ -280,13 +280,13 @@
 </span><span class="c1"># Remove separate data frames</span><span class="w">
 </span><span class="n">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">sheet_names</span><span class="p">,</span><span class="w"> </span><span class="s2">"clean_data"</span><span class="p">,</span><span class="w"> </span><span class="s2">"data"</span><span class="p">))</span></code></pre></figure>
 
-<p>After preparing the data, we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.</p>
+<p>After having prepared the data we will analyze the evolution of cinemas in Strasbourg with the help of data visualizations. First, we display the number of cinemas over time. Data is available from 1992.</p>
 
 <p style="text-align: center;"><img src="../assets/images/number_of_cinemas.png" alt="number_of_cinemas" /></p>
 
-<p>A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level. Did the reduction actually correspond to less people going to the movies?</p>
+<p>A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2004, the number remained at this level. Did the reduction actually correspond to less people going to the movies?</p>
 
-<p>The following graph visualizes different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate. A striking impact on the evolution of cinemas in Strasbourg was the opening of the first (and until today the only) multiplex cinema in 1999 (cf. the red vertical line). All at once, the number of seats nearly doubled. Consequently, there were more screens available and more movies shown from then on. However, the number of entries did not increase as much. Nevertheless, it reached its peak in 2011 with around 2.5 millions entries and is slightly decreasing since then. Revenues follow this overall trend.</p>
+<p>The following graph visualizes different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate. A striking impact on the evolution of cinemas in Strasbourg had the opening of the first (and until today the only) multiplex cinema in 1999 (cf. the red vertical line). All at once, the number of seats nearly doubled. Consequently, there were more screens available and more movies shown from then on. However, the number of entries did not increase as much. Nevertheless, it reached its peak in 2011 with around 2.5 millions entries and is slightly decreasing since then. Revenues follow this overall trend.</p>
 
 <p style="text-align: center;"><iframe style="width:80%;" height="500" src="https://chodera.shinyapps.io/cinemas-app/" frameborder="0" allowfullscreen=""></iframe></p>
 
