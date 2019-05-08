@@ -9,7 +9,7 @@ library(tidyverse)
 library(readxl)
 
 # Load data
-path <- "/home/david/Documents/1. Data Science/R/Projects/cinemas/"
+path <- "/home/david/Documents/GitHub/chodera.github.io/assets/projects/6. Cinemas in Strasbourg/"
 films <- read_excel(str_c(path, "Meilleures audiences en salles depuis 1945.xlsx"), skip = 4)
 
 # Check data

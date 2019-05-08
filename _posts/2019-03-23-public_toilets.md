@@ -101,4 +101,4 @@ Here is the final result:
 
 PS: Public toilets in France are **free**.
 
-Get the code [here]({{ site.url }}/assets/projects/4. Public Toilets in Strasbourg/strasbourg_toilettes_20190506.R).
+Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/4.%20Public%20Toilets%20in%20Strasbourg/strasbourg_toilettes.R){:target="_blank"}.

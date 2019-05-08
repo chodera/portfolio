@@ -4,7 +4,7 @@ title: "Place names in Alsace"
 output:
   html_document:
     df_print: paged
-image: assets/images/bas_rhin.jpg
+image: assets/images/bas_rhin_opt.jpg
 normal: true
 show: true
 logo: r
@@ -168,6 +168,6 @@ ggplot(data = filter(suffixes, n > 5)) +
 
 ![suffixes](../assets/images/suffixes.png)
 
-This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future. 
+This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future.
 
-Get the code [here]({{ site.url }}/assets/projects/3. Analyse place names in Alsace/place_names_20190506.R).
+Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R){:target="_blank"}.

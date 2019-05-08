@@ -163,4 +163,4 @@ The clean data set can be downloaded [here]({{ site.url }}/assets/data/bas_rhin.
 ## #   population <dbl>, densite <dbl>
 {% endhighlight %}
 
-Get the code [here]({{ site.url }}/assets/projects/2. Scraping a Wikipedia table/webscraping_wikipedia_20190506.R).
+Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2.%20Scraping%20a%20Wikipedia%20table/webscraping_wikipedia.R){:target="_blank"}.

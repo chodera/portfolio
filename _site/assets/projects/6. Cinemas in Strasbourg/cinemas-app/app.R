@@ -1,7 +1,5 @@
 library(tidyverse)
 
-#setwd("~/Documents/GitHub/chodera.github.io/assets/projects/6. Cinemas in Strasbourg/cinemas-app")
-
 load("data/cinemas_plots.RData")
 
 # User interface ----
@@ -45,7 +43,6 @@ ui <- fluidPage(
                                        "Number of movies shown",
                                        "Number of entries",
                                        "Revenue",
-                                       "Frequentation index",
                                        "Occupancy rate"),
                            selected = "Number of seats")
         )
@@ -56,7 +53,7 @@ ui <- fluidPage(
       fluidRow(
         
         column(12, align="center",
-           plotOutput("plot", width = "120%")
+           plotOutput("plot", width = "100%")
         )
       )
   ))
@@ -71,7 +68,6 @@ server <- function(input, output) {
                    "Number of movies shown" = movies,
                    "Number of entries" = entries,
                    "Revenue" = revenue,
-                   "Frequentation index" = freq,
                    "Occupancy rate" = occ
     )
 

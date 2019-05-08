@@ -5,8 +5,8 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 May 2019 15:13:36 +0200</pubDate>
-    <lastBuildDate>Wed, 08 May 2019 15:13:36 +0200</lastBuildDate>
+    <pubDate>Wed, 08 May 2019 16:25:33 +0200</pubDate>
+    <lastBuildDate>Wed, 08 May 2019 16:25:33 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -136,13 +136,17 @@
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;../assets/images/number_of_cinemas.png&quot; alt=&quot;number_of_cinemas&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level.&lt;/p&gt;
+&lt;p&gt;A clear downward trend is to be noticed. In 1992, there were 9 cinemas in the city and the number continuously diminished down to 5. However, since 2005, the number remained at this level. Did the reduction actually correspond to less people going to the movies?&lt;/p&gt;
 
-&lt;p&gt;The following graphs visualize different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate.&lt;/p&gt;
+&lt;p&gt;The following graph visualizes different additional indicators, including information on the number of entries, screens, movies shown, revenue, and occupancy rate. A striking impact on the evolution of cinemas in Strasbourg was the opening of the first (and until today the only) multiplex cinema in 1999 (cf. the red vertical line). All at once, the number of seats nearly doubled. Consequently, there were more screens available and more movies shown from then on. However, the number of entries did not increase as much. Nevertheless, it reached its peak in 2011 with around 2.5 millions entries and is slightly decreasing since then. Revenues follow this overall trend.&lt;/p&gt;
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;iframe style=&quot;width:80%;&quot; height=&quot;500&quot; src=&quot;https://chodera.shinyapps.io/cinemas-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
-&lt;p&gt;Get the full code &lt;a href=&quot;http://localhost:4000/assets/projects/6. Cinemas in Strasbourg/cinemas_stras_20190506.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The occupancy rate is defined as the ratio between the number of seats entered during the year and the product between the number of seats and the number of sessions. It enables to evaluate the “filling” of the rooms. The corresponding graph shows a significant drop in the occupancy rate after the multiplex cinema opened which is related to the increased offer of seats. However, in the 2000s, there was a slight increase in the filling of cinemas.&lt;/p&gt;
+
+&lt;p&gt;Although the number of movie theaters continuously decreased since the 1990s, it cannot be concluded that the opening of the multiplex cinema destroyed the market for smaller, independent cinemas. People in Strasbourg (me included!) still benefit from cinemas that offer a program which is not dominated by big-budget Hollywood productions. It is only to be hoped that the slight negative trend of the number of entries in the 2010s does not continue in the next years.&lt;/p&gt;
+
+&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/6.%20Cinemas%20in%20Strasbourg/cinemas_stras.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/cinemas/</link>
@@ -716,7 +720,9 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Here is the final result. I lived in Vancouver from January until April, so indeed, it got better in the end. Based on the plot, it would have gotten even better afterwards. Still, I have never lived in a place where it rains so much as in Vancouver, BC.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/rain_vancouver.png&quot; alt=&quot;Plot&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/images/rain_vancouver.png&quot; alt=&quot;Plot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5.%20Raincouver/project_witkowski.ipynb&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/raincouver/</link>
@@ -816,7 +822,7 @@
 
 &lt;p&gt;PS: Public toilets in France are &lt;strong&gt;free&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;http://localhost:4000/assets/projects/4. Public Toilets in Strasbourg/strasbourg_toilettes_20190506.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/4.%20Public%20Toilets%20in%20Strasbourg/strasbourg_toilettes.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/public_toilets/</link>
@@ -971,7 +977,7 @@ because it splits syllables better than the French one for the names under study
 
 &lt;p&gt;This analysis was limited to places in the département Bas-Rhin, but I might extend to the second Alsatian département Haut-Rhin in the near future.&lt;/p&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;http://localhost:4000/assets/projects/3. Analyse place names in Alsace/place_names_20190506.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/place_names_in_bas_rhin/</link>
@@ -1122,7 +1128,7 @@ because it splits syllables better than the French one for the names under study
 ## #   canton &amp;lt;chr&amp;gt;, intercommunalité &amp;lt;chr&amp;gt;, superficie &amp;lt;dbl&amp;gt;,
 ## #   population &amp;lt;dbl&amp;gt;, densite &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;http://localhost:4000/assets/projects/2. Scraping a Wikipedia table/webscraping_wikipedia_20190506.R&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2.%20Scraping%20a%20Wikipedia%20table/webscraping_wikipedia.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/webscraping_wikipedia/</link>

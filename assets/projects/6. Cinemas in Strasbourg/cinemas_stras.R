@@ -211,7 +211,9 @@ entries <- ggplot(data = cinemas_stras) +
   aes(x = year, y = entries, group = 1) +
   geom_line() +
   scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
-  scale_y_continuous(limits = c(1, 3000000)) +
+  scale_y_continuous(limits = c(0, 3000000), 
+                     breaks = c(0, 1000000, 2000000, 3000000),
+                     label = c("0", "1 mln", "2 mln", "3 mln")) +
   expand_limits(y = 1) +
   labs(x = "Year",
        y = "Number of entries") +
@@ -230,31 +232,14 @@ revenue <- ggplot(data = cinemas_stras) +
   aes(x = year, y = revenue, group = 1) +
   geom_line() +
   scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
-  scale_y_continuous(limits = c(0, 15000000)) +
+  scale_y_continuous(limits = c(0, 15000000), 
+                     breaks = c(0, 5000000, 10000000, 15000000),
+                     label = c("0", "5 mln", "10 mln", "15 mln")) +
   #expand_limits(y = 1) +
   labs(x = "Year",
        y = "Revenue") +
   geom_vline(xintercept = 1999.5, colour = "red") +
   annotate("text", x = 2005, y = 6000000, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
-  theme_bw() +
-  theme(text=element_text(family="Merriweather"),
-        panel.background = element_rect(fill = NA),
-        panel.grid.major.x = element_line(colour = "lightgray"),
-        panel.grid.major.y = element_line(colour = "lightgray"),
-        axis.text.x = element_text(colour = "black", angle = 45, hjust = 1),
-        axis.text.y = element_text(colour="black"))
-
-## Frequentation index
-freq <- ggplot(data = cinemas_stras) +
-  aes(x = year, y = frequentation_index, group = 1) +
-  geom_line() +
-  scale_x_continuous(breaks = c(1992:2017)[seq(1, length(c(1992:2017)), 2)], limits = c(1992, 2017)) +
-  scale_y_continuous(limits = c(0, 10)) +
-  #expand_limits(y = 1) +
-  labs(x = "Year",
-       y = "Frequentation index") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
-  annotate("text", x = 2005, y = 4, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
         panel.background = element_rect(fill = NA),
@@ -282,8 +267,5 @@ occ <- ggplot(data = cinemas_stras) +
         axis.text.x = element_text(colour = "black", angle = 45, hjust = 1),
         axis.text.y = element_text(colour="black"))
 
-# Plot graphs
-grid.arrange(seats, screens, movies, entries, revenue, freq, occ, ncol = 2)
-
 # Save plots
-save(seats, screens, movies, entries, revenue, freq, occ, file = "cinemas_plots.RData")
+save(seats, screens, movies, entries, revenue, occ, file = "cinemas_plots.RData")

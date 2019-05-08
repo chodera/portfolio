@@ -7,7 +7,7 @@ output:
 image: assets/images/rain.jpg
 normal: true
 show: true
-logo: python 
+logo: python
 ---
 
 The following code stems from a project I prepared while studying in Vancouver. As it was very, very rainy, I decided to analyze some weather data, trying to answer if there was reason to be optimistic for the months to come.
@@ -303,4 +303,8 @@ summary()
 ```
 Here is the final result. I lived in Vancouver from January until April, so indeed, it got better in the end. Based on the plot, it would have gotten even better afterwards. Still, I have never lived in a place where it rains so much as in Vancouver, BC.
 
+{:refdef: style="text-align: center;"}
 ![Plot]({{ site.url }}/assets/images/rain_vancouver.png)
+{:refdef}
+
+Get the full code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5.%20Raincouver/project_witkowski.ipynb){:target="_blank"}.
