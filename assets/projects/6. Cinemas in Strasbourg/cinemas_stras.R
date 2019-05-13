@@ -158,7 +158,7 @@ seats <- ggplot(data = cinemas_stras) +
   expand_limits(y = 1) +
   labs(x = "Year",
        y = "Number of seats") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, colour = "red", alpha = 0.3, size = 6) +
   annotate("text", x = 2005, y = 3800, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
@@ -177,7 +177,7 @@ screens <- ggplot(data = cinemas_stras) +
   expand_limits(y = 1) +
   labs(x = "Year",
        y = "Number of screens") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, alpha = 0.3, colour = "red", size = 6) +
   annotate("text", x = 2005, y = 25, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
@@ -196,7 +196,7 @@ movies <- ggplot(data = cinemas_stras) +
   expand_limits(y = 1) +
   labs(x = "Year",
        y = "Number of movies shown") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, alpha = 0.3, colour = "red", size = 6) +
   annotate("text", x = 2005, y = 40000, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
@@ -217,7 +217,7 @@ entries <- ggplot(data = cinemas_stras) +
   expand_limits(y = 1) +
   labs(x = "Year",
        y = "Number of entries") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, alpha = 0.3, colour = "red", size = 6) +
   annotate("text", x = 2005, y = 1000000, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
@@ -238,7 +238,7 @@ revenue <- ggplot(data = cinemas_stras) +
   #expand_limits(y = 1) +
   labs(x = "Year",
        y = "Revenue") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, alpha = 0.3, colour = "red", size = 6) +
   annotate("text", x = 2005, y = 6000000, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),
@@ -257,7 +257,7 @@ occ <- ggplot(data = cinemas_stras) +
   #expand_limits(y = 1) +
   labs(x = "Year",
        y = "Occupancy rate") +
-  geom_vline(xintercept = 1999.5, colour = "red") +
+  geom_vline(xintercept = 1999.5, alpha = 0.3, colour = "red", size = 6) +
   annotate("text", x = 2005, y = 9, label = "Opening of multiplex cinema", family="Merriweather", size = 3) +
   theme_bw() +
   theme(text=element_text(family="Merriweather"),

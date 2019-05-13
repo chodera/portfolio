@@ -29,7 +29,12 @@ ui <- fluidPage(
          #sidebar {
          background-color: white;
          border-color: white;
-         }')
+         }'),
+    
+    tags$head(
+     tags$style(type="text/css", "text {font-family: 'Merriweather', serif}")
+    )
+    
   )),
   
   mainPanel(
