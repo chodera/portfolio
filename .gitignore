@@ -3,3 +3,5 @@
 *.css.map
 *.sass.map
 *.scss.map
+.Rproj.user
+assets/projects/9_archi-wiki/data/
