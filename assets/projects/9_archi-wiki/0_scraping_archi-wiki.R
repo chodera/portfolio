@@ -8,6 +8,8 @@
 
 # TO DO ADD EMPTY STRINGS IN CASE THERE IS NO LON AND LAT IN FOR LOOP!
 # OR PERHAPS EVEN NOT NECESSARY BECAUSE THERE IS THE REFERENTIEL ADRESSE - LOCATION
+# BETTER TRY IT BECAUSE NOT SO EASY TO MATCH ARCHI WIKI WITH REFERENCE
+# DONE !
 
 # Load packages
 library(tidyverse)
@@ -94,12 +96,12 @@ while (length(next_page) > 0) {
   
 }
 
-# Filter ulrs (only containing Strasbourg and starting with Adresse)
+# Filter ulrs (only containing "Strasbourg" and starting with "Adresse")
 
 # Clean links
 df_clean <- full_data %>%
-  filter(str_detect(link_texts, "^Adresse:")) %>%
-  filter(str_detect(link_texts, "Strasbourg"))
+  filter(str_detect(link_texts, "^Adresse:"), 
+         str_detect(link_texts, "Strasbourg")) 
 
 # Pull links and link texts
 clean_links <- df_clean %>% 
@@ -110,20 +112,22 @@ link_texts <- df_clean %>%
 # Set final urls
 urls <- str_c("https://www.archi-wiki.org", clean_links)
 
-# Save urls in R object
+# Save urls and link texts in R objects
 write_rds(urls, "9_archi-wiki/data/urls.rds")
-
+write_rds(link_texts, "9_archi-wiki/data/link_texts.rds")
 
 # 2. Loop over all urls and scrape data -----------------------------------
 
-# # Set url
-# url_test <- "https://www.archi-wiki.org/Adresse:Fa%C3%A7ade_nord,_c%C3%B4t%C3%A9_ouest_(Strasbourg)"
-# 
-# urls <- c("https://www.archi-wiki.org/Adresse:Fa%C3%A7ade_nord,_c%C3%B4t%C3%A9_ouest_(Strasbourg)",
-#           "https://www.archi-wiki.org/Adresse:15_rue_du_Sanglier_(Strasbourg)",
-#           "https://www.archi-wiki.org/Adresse:15_rue_du_Sanglier_(Strasbourg)")
-# 
-# # Load html
+## First run went till 2738 -> continue with 2739
+length(date_full)/length(urls) * 100 # 26.5 % -> this means we need 4 runs (4 * 2600)
+
+urls <- read_rds("9_archi-wiki/data/urls.rds")
+link_texts <- read_rds("9_archi-wiki/data/link_texts.rds")
+
+urls_1 <- urls[1:2600]
+urls_2 <- urls[2601:5200]
+urls_3 <- urls[5201:7800]
+urls_4 <- urls[7801:length(urls)]
 
 # Scrape date of construction, structure and coordinates from every page
 ## Set empty vectors
@@ -133,28 +137,51 @@ lat_full <- c(character(0))
 lon_full <- c(character(0))
 
 ## Set progress bar
-i <- 0
-pb <- txtProgressBar(0, length(urls), style=3)
+i <- 1
+pb <- txtProgressBar(1, 2600, style=3)
 
 ## Loop over all urls 
-for (url in urls) {
+for (url in urls_4) {
   
   # Load html
   page <- read_html(url)
   
   # Extract latitude and longitude from leaflet map (first coordinates that occur)
-  lat <- page %>% 
+  ## Check if lat exists on page
+  lat_exists <- page %>% 
     html_nodes("#map_leaflet_1") %>% 
     html_text() %>% 
-    str_extract('"lat":\\d+.\\d+') %>% 
-    str_extract("\\d+.\\d+")
-  lon <- page %>% 
-    html_nodes("#map_leaflet_1") %>% 
-    html_text() %>% 
-    str_extract('"lon":\\d+.\\d+') %>% 
-    str_extract("\\d+.\\d+")
+    str_detect('"lat":\\d+.\\d+')
   
-  # Append to vector
+  ## In case there is a lat extract it, otherwise set empty string
+  if (length(lat_exists) > 0) {
+    lat <- page %>% 
+      html_nodes("#map_leaflet_1") %>% 
+      html_text() %>% 
+      str_extract('"lat":\\d+.\\d+') %>% 
+      str_extract("\\d+.\\d+") 
+  } else {
+    lat <- ""
+  } # end else if
+  
+  ## Check if lon exists on page
+  lon_exists <- page %>% 
+    html_nodes("#map_leaflet_1") %>% 
+    html_text() %>% 
+    str_detect('"lon":\\d+.\\d+')
+  
+  ## In case there is a lon extract it, otherwise set empty string
+  if (length(lon_exists) > 0) {
+    lon <- page %>% 
+      html_nodes("#map_leaflet_1") %>% 
+      html_text() %>% 
+      str_extract('"lon":\\d+.\\d+') %>% 
+      str_extract("\\d+.\\d+")
+  } else {
+    lon <- ""
+  } # end else if
+  
+  ## Append to vector
   lat_full <- c(lat_full, lat)
   lon_full <- c(lon_full, lon)
   
@@ -197,16 +224,38 @@ for (url in urls) {
   setTxtProgressBar(pb, i)
 } # end outer for-loop
 
+
 # Put together to a tibble
-df <- bind_cols(tibble(urls[1:2738]),
-                tibble(link_texts[1:2738]),
+df_1 <- bind_cols(tibble(urls[1:2600]),
+                tibble(link_texts[1:2600]),
                 tibble(date_full), 
-                tibble(structure_full)
-                #tibble(lat_full),
-                #tibble(lon_full)
-                )
+                tibble(structure_full),
+                tibble(lat_full),
+                tibble(lon_full))
 
-## First run went till 2738 -> continue with 2739
-length(date_full)/length(urls) * 100 # 26.5 % -> this means we need 4 runs
+df_1_2 <- bind_cols(tibble(urls[1:5200]),
+                tibble(link_texts[1:5200]),
+                tibble(date_full), 
+                tibble(structure_full),
+                tibble(lat_full),
+                tibble(lon_full))
 
-write_rds(df, "9_archi-wiki/data/archi-wiki_1.rds")
+df_3 <- bind_cols(tibble(urls[5201:7800]),
+                  tibble(link_texts[5201:7800]),
+                  tibble(date_full), 
+                  tibble(structure_full),
+                  tibble(lat_full),
+                  tibble(lon_full))
+
+df_4 <- bind_cols(tibble(urls[7801:length(urls)]),
+                  tibble(link_texts[7801:length(urls)]),
+                  tibble(date_full), 
+                  tibble(structure_full),
+                  tibble(lat_full),
+                  tibble(lon_full))
+
+# Save data
+#write_rds(df_1, "9_archi-wiki/data/archi-wiki_1.rds")
+#write_rds(df_1_2, "9_archi-wiki/data/archi-wiki_2.rds")
+#write_rds(df_3, "9_archi-wiki/data/archi-wiki_3.rds")
+write_rds(df_4, "9_archi-wiki/data/archi-wiki_4.rds")

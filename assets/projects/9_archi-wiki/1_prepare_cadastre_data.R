@@ -25,6 +25,10 @@ stras_carto_adresse <- read_sf("9_archi-wiki/data/referentiel_topo_simplifie_shp
 # Réferentiel topographique
 stras_topo <- read_sf("9_archi-wiki/data/referentiel_carto_10_000_shp/rg_r2m_bati_fusionne.shp")
 
+# OSM data
+osm <- read_sf("9_archi-wiki/data/Strassburg-shp/buildings.shp")
+
+
 # Filter for small part of the city (for testing)
 # stras_cadastre %>% 
 #   distinct(NUM_SECTIO) %>% 
