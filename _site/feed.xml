@@ -5,9 +5,30 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 May 2019 22:14:22 +0200</pubDate>
-    <lastBuildDate>Wed, 08 May 2019 22:14:22 +0200</lastBuildDate>
+    <pubDate>Mon, 20 May 2019 17:54:29 +0200</pubDate>
+    <lastBuildDate>Mon, 20 May 2019 17:54:29 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>History of buildings in Strasbourg</title>
+        <description>&lt;p&gt;Recently, I came across the crowd-sourcing project &lt;a href=&quot;https://www.archi-wiki.org/&quot; target=&quot;_blank&quot;&gt;Archi-Wiki&lt;/a&gt; which documents the history of buildings and places of a city, together with background information on the architect, successive transformations and a collection of photos. Being based in Strasbourg, this site especially contains rich information on places in Strasbourg and I decided to use the data to visualize the history of buildings in the city (inspired by projects such as &lt;a href=&quot;https://www.comeetie.fr/galerie/BatiParis/#12/48.8589/2.3491&quot; target=&quot;_blank&quot;&gt;Histoire du bâti Parisien&lt;/a&gt; and &lt;a href=&quot;https://www.bklynr.com/block-by-block-brooklyns-past-and-present/&quot; target=&quot;_blank&quot;&gt;Block by Block, Brooklyn’s Past an Present&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;As the API turned out not to be functioning after contacting the host, the only way to get the data was to scrape all the websites containing information on the individual buildings (more than 13,000). Out of the information available I was particularly interested in the date of construction in the infobox. There is as well a little leaflet map on each page, centered on the specific building which is why I also scraped the metadata of that map (latitude and longitude of marker). However, this data turned out to be quite unprecise as some markers are not within the polygons of the building footprints.&lt;/p&gt;
+
+&lt;p&gt;As a remedy, the addresses were geolocalised with the help of the official address register of the city of Strasbourg, which is available on their &lt;a href=&quot;https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki&quot; target=&quot;_blank&quot;&gt;open data portal&lt;/a&gt;. Therefore, there was luckily no need for using geocoding service. Finally, spatial data on the building footprints comes from OpenStreetMap and was obtained via &lt;a href=&quot;https://download.bbbike.org/osm/bbbike/&quot; target=&quot;_blank&quot;&gt;BBBike&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This project is still being developed and the map underneath is just a first impression of how the map will look like in the end. By joining the various data sources, there is a considerate amount of data being lost (from 10,190 down to 3,024 addresses); there is in particular need for better harmonizing the data on addresses from Archi-Wiki and the official register.&lt;/p&gt;
+
+&lt;iframe style=&quot;width:100%;&quot; height=&quot;600&quot; src=&quot;/assets/leaflet/map_stras&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Get the preliminary data sets and scripts &lt;a href=&quot;https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/archi-wiki/</link>
+        <guid isPermaLink="true">http://localhost:4000/archi-wiki/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Cinemas in Strasbourg</title>
