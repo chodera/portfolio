@@ -307,4 +307,4 @@ Here is the final result. I lived in Vancouver from January until April, so inde
 ![Plot]({{ site.url }}/assets/images/rain_vancouver.png)
 {:refdef}
 
-Get the full code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5.%20Raincouver/project_witkowski.ipynb){:target="_blank"}.
+Get the full code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5_raincouver/project_witkowski.ipynb){:target="_blank"}.

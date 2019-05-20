@@ -172,4 +172,4 @@ ggplot(data = filter(suffixes, n > 5)) +
 
 This analysis was limited to places in the département Bas-Rhin, but I might extend it to the second Alsatian département Haut-Rhin in the near future.
 
-Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R){:target="_blank"}.
+Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3_analyse_place_names_alsace/place_names.R){:target="_blank"}.

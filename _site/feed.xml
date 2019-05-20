@@ -5,8 +5,8 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 May 2019 17:54:29 +0200</pubDate>
-    <lastBuildDate>Mon, 20 May 2019 17:54:29 +0200</lastBuildDate>
+    <pubDate>Mon, 20 May 2019 18:08:13 +0200</pubDate>
+    <lastBuildDate>Mon, 20 May 2019 18:08:13 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -21,7 +21,7 @@
 
 &lt;iframe style=&quot;width:100%;&quot; height=&quot;600&quot; src=&quot;/assets/leaflet/map_stras&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;Get the preliminary data sets and scripts &lt;a href=&quot;https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the preliminary scripts &lt;a href=&quot;https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/archi-wiki/</link>
@@ -167,7 +167,7 @@
 
 &lt;p&gt;Although the number of movie theaters continuously decreased since the 1990s, it cannot be concluded that the opening of the multiplex cinema destroyed the market for smaller, independent cinemas. People in Strasbourg (me included!) still benefit from cinemas that offer a program which is not dominated by big-budget Hollywood productions. It is only to be hoped that the slight negative trend of the number of entries in the 2010s does not continue in the next years.&lt;/p&gt;
 
-&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/6.%20Cinemas%20in%20Strasbourg/cinemas_stras.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/6_cinemas_strasbourg/cinemas_stras.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 28 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/cinemas/</link>
@@ -743,7 +743,7 @@
 
 &lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;http://localhost:4000/assets/images/rain_vancouver.png&quot; alt=&quot;Plot&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5.%20Raincouver/project_witkowski.ipynb&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/5_raincouver/project_witkowski.ipynb&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/raincouver/</link>
@@ -843,7 +843,7 @@
 
 &lt;p&gt;PS: Public toilets in France are &lt;strong&gt;free&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/4.%20Public%20Toilets%20in%20Strasbourg/strasbourg_toilettes.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/4_public_toilets_strasbourg/strasbourg_toilettes.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 23 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/public_toilets/</link>
@@ -998,7 +998,7 @@ because it splits syllables better than the French one for the names under study
 
 &lt;p&gt;This analysis was limited to places in the département Bas-Rhin, but I might extend it to the second Alsatian département Haut-Rhin in the near future.&lt;/p&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3.%20Analyse%20place%20names%20in%20Alsace/place_names.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/3_analyse_place_names_alsace/place_names.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 22 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/place_names_in_bas_rhin/</link>
@@ -1149,7 +1149,7 @@ because it splits syllables better than the French one for the names under study
 ## #   canton &amp;lt;chr&amp;gt;, intercommunalité &amp;lt;chr&amp;gt;, superficie &amp;lt;dbl&amp;gt;,
 ## #   population &amp;lt;dbl&amp;gt;, densite &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2.%20Scraping%20a%20Wikipedia%20table/webscraping_wikipedia.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Get the code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2_scraping%20a_wikipedia_table/scraping_wikipedia.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/webscraping_wikipedia/</link>

@@ -20,4 +20,4 @@ This project is still being developed and the map underneath is just a first imp
 
 <iframe style="width:100%;" height="600" src="{{site.baseurl}}/assets/leaflet/map_stras" frameborder="0" allowfullscreen></iframe>
 
-Get the preliminary data sets and scripts [here](https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki){:target="_blank"}.
+Get the preliminary scripts [here](https://github.com/chodera/chodera.github.io/tree/master/assets/projects/9_archi-wiki){:target="_blank"}.

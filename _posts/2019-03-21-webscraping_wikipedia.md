@@ -163,4 +163,4 @@ A glimpse on the clean data set (which can be downloaded [here]({{ site.url }}/a
 ## #   population <dbl>, densite <dbl>
 {% endhighlight %}
 
-Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2.%20Scraping%20a%20Wikipedia%20table/webscraping_wikipedia.R){:target="_blank"}.
+Get the code [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/2_scraping%20a_wikipedia_table/scraping_wikipedia.R){:target="_blank"}.
