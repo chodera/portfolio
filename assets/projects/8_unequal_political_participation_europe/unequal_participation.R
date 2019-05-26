@@ -10,7 +10,7 @@ library(leaflet)
 # 1. Import and prepare data ----------------------------------------------
 
 # Load survey and macro data (Stata file)
-ess <- read_dta("full_data.dta")
+ess <- read_dta("8_unequal_political_participation_europe/data/full_data.dta")
 
 ## Extract relevant data by NUTS 1 region
 ess_by_region <- ess %>%
@@ -24,7 +24,7 @@ ess_by_region <- ess %>%
 
 # Load shape file
 ## Source: https://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units/nuts
-nuts1 <- read_sf("NUTS_RG_60M_2016_4326_LEVL_1.shp")
+nuts1 <- read_sf("8_unequal_political_participation_europe/data/NUTS_RG_60M_2013_4326_LEVL_1.shp")
 
 nuts1 <- nuts1 %>% 
   # Drop irrelavant countries
@@ -35,6 +35,8 @@ nuts1 <- nuts1 %>%
 # Combine both data sets
 ess_full <- left_join(nuts1, ess_by_region, by = "id_r") 
 
+# Save data set
+write_rds(ess_full, "ess_plus_nuts.rds")
 
 # 2. Visualize data -------------------------------------------------------
 

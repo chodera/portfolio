@@ -5,8 +5,8 @@
     <description>Portfolio of data-related projects</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 May 2019 18:37:44 +0200</pubDate>
-    <lastBuildDate>Sun, 26 May 2019 18:37:44 +0200</lastBuildDate>
+    <pubDate>Sun, 26 May 2019 23:23:18 +0200</pubDate>
+    <lastBuildDate>Sun, 26 May 2019 23:23:18 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -41,6 +41,27 @@
         <pubDate>Sun, 19 May 2019 00:00:00 +0200</pubDate>
         <link>http://localhost:4000/archi-wiki/</link>
         <guid isPermaLink="true">http://localhost:4000/archi-wiki/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Unequal political participation in Europe</title>
+        <description>&lt;p&gt;This post uses some insights from my master’s thesis where I investigated contextual determinants of inequalities in political participation across European regions, Here I will give a short overview of some descriptive key findings.&lt;/p&gt;
+
+&lt;p&gt;Data for the analysis came from several sources but the main source on individual-level data was the latest &lt;a href=&quot;https://www.europeansocialsurvey.org/&quot; target=&quot;_blank&quot;&gt;European Social Survey (ESS)&lt;/a&gt; from 2016. The various data sets were prepared and merged together with the statistical software package Stata. In the following, we start by using the prepared data set and do not repeat the steps in R.&lt;/p&gt;
+
+&lt;p&gt;The interactive maps below indicate that the extent of political participation varies substantively across European regions and across different forms of political participation (illustrated are voting, attending demonstrations, working for a political party or action group and boycotting products). When comparing the different forms of participation, it is obvious that voting is the most widely performed form of participation. While there is no clear pattern, Eastern European countries tend to have lower rates of participation.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;iframe style=&quot;width:80%;&quot; height=&quot;1100&quot; src=&quot;https://chodera.shinyapps.io/unequal-app/&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;In my thesis, I further investigate these patterns of inequalities in political participation by considering differing levels of income inequality as potential explanation and conducting multilevel logistic regression analyses.&lt;/p&gt;
+
+&lt;p&gt;Get the full code &lt;a href=&quot;https://github.com/chodera/chodera.github.io/blob/master/assets/projects/8_unequal_political_participation_europe/unequal_participation.R&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 May 2019 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/unequal-participation/</link>
+        <guid isPermaLink="true">http://localhost:4000/unequal-participation/</guid>
         
         
       </item>

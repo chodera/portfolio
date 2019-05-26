@@ -5,8 +5,8 @@ account: chodera
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 941663
-bundleId: 2099741
+bundleId: 2110002
 url: https://chodera.shinyapps.io/unequal-app/
-when: 1558469781.76316
+when: 1558905447.16755
 asMultiple: FALSE
 asStatic: FALSE
