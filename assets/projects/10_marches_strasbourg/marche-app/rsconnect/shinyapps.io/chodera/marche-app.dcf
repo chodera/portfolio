@@ -1,0 +1,12 @@
+name: marche-app
+title: marche-app
+username:
+account: chodera
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 949658
+bundleId: 2109650
+url: https://chodera.shinyapps.io/marche-app/
+when: 1558888014.32006
+asMultiple: FALSE
+asStatic: FALSE
