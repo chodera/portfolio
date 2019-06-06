@@ -1,0 +1,21 @@
+# Ideas for analysis
+- analysis per category
+Tätlicher Übergriff/Körperverletzung - assault and battery
+Brandanschlag - arson attack
+Kundgebung/Demo - rally/demonstration
+Sonstige Angriffe - other attacks
+Verdachtsfall - suspected case
+
+- temporary analysis: attacks per month/year
+
+- spatial analysis: attacks per Bundesland (normalize by population size)
+-> leaflet map?
+
+
+# Text
+
+The project [Chronik flüchtlingsfeindlicher Vorfälle](https://www.mut-gegen-rechte-gewalt.de/service/chronik-vorfaelle) 
+(*engl. Chronicle of refugee incidents*) documents attacks on and demonstrations against refugees and refugee shelters
+in Germany. It is based on publicly accessible reports in newspaper articles, police press releases and reports from 
+counselling centres for victims of right-wing, racist and anti-Semitic violence.
+
