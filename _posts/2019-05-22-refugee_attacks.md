@@ -17,6 +17,8 @@ This post shows how to scrape data from the website, turn it into machine readab
 
 ## 1. Scraping "Chronik flüchtlingsfeindlicher Vorfälle"
 
+In a first step, the data, which is contained on several hundreds of pages, needs to be scraped.
+
 ### Setup
 
 Modules to be loaded are numpy and pandas for handling the data, requests-html for scraping the website, as well as seaborn for plotting.
@@ -70,7 +72,7 @@ https://www.mut-gegen-rechte-gewalt.de/service/chronik-vorfaelle?page=3
 https://www.mut-gegen-rechte-gewalt.de/service/chronik-vorfaelle?page=4
 {% endhighlight %}
 
-The urls look fine, now we ready to launch the scraper. It loops over every entry and scrapes information on each of the respective fields. If there is no information on a variable in a certain entry, the value None is assigned.
+The urls look fine, now we are ready to launch the scraper. It loops over every entry and scrapes information from each of the respective fields. If there is no information on a variable in a certain entry, the value None is assigned.
 
 
 {% highlight python %}
@@ -159,8 +161,7 @@ df.to_csv('data/mut_gegen_rechte_gewalt.csv', index=False)
 
 ## 2. Data wrangling and exploration
 
-Get a first overview of the data.
-
+After having obtained the data, we first get an overview of the data.
 
 {% highlight python %}
 df.info()
@@ -182,6 +183,9 @@ dtypes: object(8)
 memory usage: 563.3+ KB
 {% endhighlight %}
 
+All in all, there are 9012 observations and 8 variables. Except of the variables casualties, source as well as source_url, the variables do not contain missing values.
+
+Let's glimpse at the first five rows of the data frame:
 
 {% highlight python %}
 df.head()
@@ -280,6 +284,7 @@ df.head()
 
 ### Data cleaning
 
+What is the data type of each column?
 
 {% highlight python %}
 df.dtypes
@@ -301,7 +306,7 @@ All columns are of the type "object". The least we should do is to turn the date
 
 #### Date
 
-Change date column to datetime object.
+Change date column to datetime object:
 
 
 {% highlight python %}
@@ -379,7 +384,7 @@ df['bundesland'].unique().shape[0]
 16
 {% endhighlight %}
 
-
+Anti-refugee incidents occurred in all 16 federal states of Germany.
 
 {% highlight python %}
 df['bundesland'].unique()
@@ -431,7 +436,7 @@ df[df['casualties'].notnull()].shape[0]
 {% endhighlight %}
 
 
-There are only 611 entries which contain information on the number of casualties. I suppose this can be interpreted than in other cases there were (luckily) no casualties.
+There are only 611 entries which contain information on the number of casualties. I suppose this can be interpreted that in other cases there were (luckily) no casualties. On the other hand, it might be the case that casualties were not reported in the database which leads to the assumption that the number of incidents with casualties is underestimated.
 
 #### Description
 
@@ -441,15 +446,26 @@ print(*df['description'].head(3), sep='\n\n')
 {% endhighlight %}
 
 {% highlight python %}
-Zwei Deutsche haben am Abend zunächst neben einer Asylunterkunft randaliert. Als Kinder, die in der Asylunterkunft leben, sie aufforderten, dies zu unterlassen, betraten die beiden 21- bzw. 23-Jährigen das Gelände der Unterkunft. Einer von ihnen zückte ein Messer und soll laut Polizei "Stichbewegungen gegen einen tschetschenischen Bewohner ausgeführt haben. Bei der folgenden Rangelei verletzte sich der Tschetschene an der Hand, ein Deutscher erlitt Verletzungen am Bein und musste operiert werden", so die Polizei weiter. Die Kriminalpolizei ermittelt.
 
-Ein 21-jähriger aus Syrien wurde in der Nacht aus einer Gruppe aus fünf oder sechs jungen Deutschen zunächst rassistisch beleidigt und dann auch geschlagen. Als ein 47-jähriger Zeuge dazwischengehen wollte, sollen ihn die Angreifer zurückgestoßen und am Fuß verletzt haben. Der 21-Jährige musste nicht behandelt werden. Die Täter flüchteten, der Staatsschutz ermittelt.
+Zwei Deutsche haben am Abend zunächst neben einer Asylunterkunft randaliert. Als Kinder, die in der Asylunterkunft
+leben, sie aufforderten, dies zu unterlassen, betraten die beiden 21- bzw. 23-Jährigen das Gelände der Unterkunft.
+Einer von ihnen zückte ein Messer und soll laut Polizei "Stichbewegungen gegen einen tschetschenischen Bewohner
+ausgeführt haben. Bei der folgenden Rangelei verletzte sich der Tschetschene an der Hand, ein Deutscher erlitt
+Verletzungen am Bein und musste operiert werden", so die Polizei weiter. Die Kriminalpolizei ermittelt.
 
-Unbekannte haben in der Nacht Eier gegen die Fassade einer Asylunterkunft geworfen. Als ein Mitarbeiter des Sicherheitsdienstes die Täter ansprach, flüchteten sie.
+Ein 21-jähriger aus Syrien wurde in der Nacht aus einer Gruppe aus fünf oder sechs jungen Deutschen zunächst
+rassistisch beleidigt und dann auch geschlagen. Als ein 47-jähriger Zeuge dazwischengehen wollte, sollen ihn die
+Angreifer zurückgestoßen und am Fuß verletzt haben. Der 21-Jährige musste nicht behandelt werden. Die Täter
+flüchteten, der Staatsschutz ermittelt.
+
+Unbekannte haben in der Nacht Eier gegen die Fassade einer Asylunterkunft geworfen. Als ein Mitarbeiter des
+Sicherheitsdienstes die Täter ansprach, flüchteten sie.
+
 {% endhighlight %}
 
 #### Source
 
+How many distinct sources have been consulted?
 
 {% highlight python %}
 df['source'].unique().shape[0]
@@ -458,6 +474,8 @@ df['source'].unique().shape[0]
 {% highlight python %}
 596
 {% endhighlight %}
+
+Which sources have been consulted most often?
 
 {% highlight python %}
 df['source'].value_counts()[0:10]
@@ -478,14 +496,14 @@ Name: source, dtype: int64
 {% endhighlight %}
 
 
-There are 596 different sources, but the most common ones are related to answers from the Bundesregierung. A further inspection reveals that events documented are quite common, too. Therefore we will categorize the variable source into three categories: government, police, others.
+There are 596 different sources, but the most common ones are related to answers from the Bundesregierung. A further inspection reveals that events documented by the police are quite common, too. Therefore we will categorize the variable source into three categories: government, police, others.
 
 
 {% highlight python %}
 # Initialise column
 df['source_category'] = df['source']
 
-# Replace null values by empty string (otherwise boolean indexing will throw an arrow because of boolean indexing)
+# Replace null values by empty string (otherwise boolean indexing will throw an arrow)
 df.loc[pd.isnull(df['source_category']), 'source_category'] = ''
 
 # Replace respective values
@@ -528,14 +546,15 @@ print(*df['source_url'].head(), sep='\n')
 {'http://www.paz-online.de/Nachrichten/Panorama/Auslaenderfeindlicher-Attacke-Acht-betrunkene-Maenner-verpruegeln-Asylbewerber'}
 {% endhighlight %}
 
-Delete the curly brackets:
+The curly brackets should be deleted:
 
 {% highlight python %}
 df['source_url'] = df['source_url'].str.replace(r"(\{')?('\})?", '')
-print(*df['source_url'].head(), sep='\n')
 {% endhighlight %}
 
 ### Final checkup
+
+Let's check the dataframe once again after having cleaned the columns:
 
 {% highlight python %}
 df.info()
@@ -680,9 +699,11 @@ df.head()
 
 ### Additional data
 
+Two other data sources are used to enrich the following analysis.
+
 #### Population by Bundesland (for standardization)
 
-In order to standardize the absolute number of attacks in a Bundesland by the population, we will merge official data from the Federal Statistical Office of Germany (source: https://www-genesis.destatis.de/genesis/online).
+In order to standardize the absolute number of attacks in a Bundesland by the population, we will merge official data on the size of population of each Bundesland (in 2015) from the [Federal Statistical Office of Germany](https://www-genesis.destatis.de/genesis/online){:target="_blank"}.
 
 
 {% highlight python %}
@@ -696,6 +717,7 @@ pop = pd.read_csv('data/12411-0010.csv',
 df.sort_values('bundesland')['bundesland'].unique()
 {% endhighlight %}
 
+Just make sure that the key, on which the two data sets are merged, are identical:
 
 {% highlight python %}
 pop['bundesland']
@@ -725,28 +747,28 @@ Name: bundesland, dtype: object
 
 {% highlight python %}
 df = df.merge(pop, on='bundesland', how='left')
-df.info()
 {% endhighlight %}
 
 #### Official statistics on numbers of refugees
 
-Furthermore, official statistics on the monthly number of refugees are included in the analysis. These numbers are published by the Federal Office for Migration and Refugees, unfortunately in PDF format. However, a local initiative from Munich turns these documents into machine readable csv documents and makes them available online: https://github.com/muc-fluechtlingsrat/bamf-asylgeschaeftsstatistik. Moreover, they via the Freedom of Information Act they got access to data from before 2017 which was not published by the Federal Office for Migration and Refugees.
+Furthermore, official statistics on the monthly number of refugees are included in the analysis. These numbers are published by the [Federal Office for Migration and Refugees](http://www.bamf.de/DE/Infothek/Statistiken/Asylzahlen/Asylgesch%C3%A4ftsstatistik/asylgeschaeftsstatistik-node.html){:target="_blank"}, unfortunately in PDF format. However, a local initiative from Munich turns these documents into machine readable csv documents and makes them available [online](https://github.com/muc-fluechtlingsrat/bamf-asylgeschaeftsstatistik){:target="_blank"}. Moreover, they got access to data from before 2017 via the Freedom of Information Act, which was not published by the Federal Office for Migration and Refugees.
 
-I obtained the data needed for this analysis with an R script (get it here). Here, we only need to load the data:
+I obtained the data needed for this analysis with an R script (get it [here](https://github.com/chodera/chodera.github.io/blob/master/assets/projects/7_violent_attacks_against_refugees_germany/asylgeschaeftsstatistik.R){:target="_blank"}). Here, we only need to load the data:
 
 
 {% highlight python %}
 statistik = pd.read_csv('data/asylmonatszahlen.csv')
-statistik.head()
 {% endhighlight %}
 
 The steps of preparing this data set for analysis are done in the following section.
 
 ## 3. Analyzing the data
 
+Now that we got the data together, we are ready to begin with the analysis.
+
 ### Attacks over time
 
-First, let's prepare the data from the "Chronik": aggregate by month (setting date as index) and count number of attacks.
+First, let's prepare the data from the "Chronik": aggregate by month (setting date as index) and count the number of attacks.
 
 
 {% highlight python %}
@@ -791,7 +813,7 @@ df_date.head()
 <br>
 
 
-Prepare the data on monthly number of refugees by formatting it like above.
+Prepare the data on monthly number of refugees by formatting it like the data from the "Chronik".
 
 
 {% highlight python %}
@@ -955,6 +977,9 @@ sns.despine(top=True, right=True, left=True, bottom=True);
 ![png](../assets/images/attacks_time.png)
 {:refdef}
 
+The diagram shows that the number of attacks per month increased in 2015 and reached its peak in January 2016 with 645 attacks. Since then, it steadily decreased but remained above a level of more than 100 attacks until September 2018. Afterwards it dropped significantly to less than 10 attacks per month. This sharp decline seems too strong to capture reality. It might be related to the fact that the main source are government reports which, by their nature, document events in the past and are not published regularly. As such, the numbers for the months after September 2018 might still increase. Also, the sharp decline might result from the "Chronik" being maintained less intensively but that is just a guess.
+Interestingly, the number of attacks follows closely the number of refugees arriving in Germany. It peaked a couple of months later in August 2016 and sharply decreased since then, staying on a relative stable level.
+
 ### Attacks by Bundesland
 
 Group the number of attacks by Bundesland:
@@ -1093,6 +1118,7 @@ Name: east_west, dtype: int64
 {% endhighlight %}
 
 
+Plot the numbers:
 
 {% highlight python %}
 # Set figure and font size
@@ -1121,9 +1147,12 @@ sns.despine(top=True, right=True, left=True, bottom=True);
 ![png](../assets/images/attacks_bar_absolute.png)
 {:refdef}
 
+Most of the attacks occurred in Sachsen, followed by Bayern and Nordrhein-Westfalen. As the latter two have much larger population sizes, it is important to standardize by the number of inhabitants when comparing the number of attacks.
+
+
 ### Attacks by Bundesland (standardized by population)
 
-Compute standardized attack rate (100000 attacks per person):
+Compute standardized attack rate (per 100,000 inhabitants):
 
 
 {% highlight python %}
@@ -1161,8 +1190,11 @@ sns.despine(top=True, right=True, left=True, bottom=True);
 ![png](../assets/images/attacks_bar_std.png)
 {:refdef}
 
+This diagram shows a striking pattern: Relative to the population size, the attacks occur more often in Eastern Germany than Western Germany.
+
 ### Attacks by category
 
+Which kind of events are documented in the "Chronik"?
 
 {% highlight python %}
 df_category = df.groupby('category').size().reset_index(name='n').sort_values('n', ascending=False)
@@ -1250,7 +1282,11 @@ sns.despine(top=True, right=True, left=True, bottom=True);
 ![png](../assets/images/attacks_bar_category.png)
 {:refdef}
 
+Actually, most of the events are not assigned to a category but are treated as "other attacks".
+
 ### Number of casualties
+
+Out of the events, in which casualties were documented, how many casualties were documented for each event?
 
 Absolute numbers:
 
@@ -1307,6 +1343,6 @@ print(*df[df['casualties'] == 35]['description'])
 
 ## Conclusion
 
-...
+This post analyses the disturbingly high level of anti-refugee violence in Germany. The number of attacks against refugees has fortunately decreased since 2016. However, this is also due to the fact that fewer refugees are coming to Germany. The work of organizations such as the [Amadeu Antonio Foundation](https://www.amadeu-antonio-stiftung.de/){:target="_blank"} continues to be very important. 
 
-Get the full code [here](https://github.com/chodera/chodera.github.io/tree/master/assets/projects/7_violent_attacks_against_refugees_germany){:target="_blank"}.
+Get the full code and data [here](https://github.com/chodera/chodera.github.io/tree/master/assets/projects/7_violent_attacks_against_refugees_germany){:target="_blank"}.
